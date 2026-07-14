@@ -10,8 +10,14 @@
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
     "db:seed": "node prisma/seed.mjs",
-    "crawler:check": "python3 crawler/check_scrapling.py",
-    "crawler:dev": "python3 crawler/main.py"
+    "db:clear-sample": "node scripts/clear-sample-data.mjs",
+    "crawler:check": ".venv/bin/python crawler/check_scrapling.py",
+    "crawler:dev": ".venv/bin/python crawler/main.py --help",
+    "crawl:real-tiktok": "./scripts/crawl-real-tiktok.sh",
+    "crawl:product-list": ".venv/bin/python crawler/main.py product-list",
+    "crawl:product-detail": ".venv/bin/python crawler/main.py product-detail",
+    "crawl:product-urls": ".venv/bin/python crawler/main.py product-urls",
+    "crawl:reviews": ".venv/bin/python crawler/main.py reviews"
   },
   "dependencies": {
     "@prisma/client": "^6.0.0",

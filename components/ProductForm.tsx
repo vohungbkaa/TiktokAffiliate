@@ -58,6 +58,10 @@ export function ProductForm({ action, product, submitLabel }: ProductFormProps) 
             />
           </div>
           <div className="field">
+            <label htmlFor="currency">Currency</label>
+            <input id="currency" name="currency" defaultValue={product?.currency ?? "VND"} />
+          </div>
+          <div className="field">
             <label htmlFor="commissionRate">Commission Rate (%)</label>
             <input
               id="commissionRate"

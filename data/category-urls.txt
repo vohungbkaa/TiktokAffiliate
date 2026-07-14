@@ -1,0 +1,3 @@
+# Paste TikTok Shop category URLs here, one URL per line.
+# Lines starting with # are ignored.
+https://shop.tiktok.com/vn/c/food-beverages/700437?source=ecommerce_mall&enter_method=categories&first_entrance=ecommerce_mall&first_entrance_position=region_not_match&first_entrance_tt_scene=seo&btm_pre=a2270.b46636.c37357.d69217_i19&btm_pre_show_id=047a4408-1c44-4997-9918-f9183b32976e&btm_transfer_id=009581d6-9f00-4aea-b45d-51077a968fd3

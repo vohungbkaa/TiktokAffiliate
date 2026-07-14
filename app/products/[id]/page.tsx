@@ -14,13 +14,29 @@ function formatValue(value: unknown) {
   return String(value);
 }
 
+function formatCurrency(value: unknown, currency = "VND") {
+  if (value === null || value === undefined || value === "") {
+    return "-";
+  }
+
+  return new Intl.NumberFormat("vi-VN", {
+    style: "currency",
+    currency,
+    maximumFractionDigits: currency === "VND" ? 0 : 2,
+  }).format(Number(value));
+}
+
 export default async function ProductDetailPage({ params }: ProductDetailPageProps) {
   const { id } = await params;
   const product = await prisma.product.findUnique({
     where: { id },
     include: {
       reviews: { orderBy: { capturedAt: "desc" }, take: 10 },
-      snapshots: { orderBy: { createdAt: "desc" }, take: 10 },
+      snapshots: {
+        orderBy: { createdAt: "desc" },
+        take: 10,
+        include: { crawlJob: true },
+      },
     },
   });
 
@@ -53,14 +69,16 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
               {formatValue(product.shopName)}
             </div>
             <div>
-              <span>Price</span>${formatValue(product.price)}
+              <span>Price</span>
+              {formatCurrency(product.price, product.currency)}
             </div>
             <div>
               <span>Commission Rate</span>
               {formatValue(product.commissionRate)}%
             </div>
             <div>
-              <span>Commission Amount</span>${formatValue(product.commissionAmount)}
+              <span>Commission Amount</span>
+              {formatCurrency(product.commissionAmount, product.currency)}
             </div>
             <div>
               <span>Sold Count</span>
@@ -97,6 +115,16 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
           <h2>Crawler Data</h2>
           <p className="muted">{product.snapshots.length} raw snapshots linked.</p>
           <p className="muted">{product.reviews.length} recent reviews linked.</p>
+          <div className="crawl-history">
+            {product.snapshots.map((snapshot) => (
+              <div key={snapshot.id} className="crawl-history-item">
+                <strong>{snapshot.crawlJob?.jobType ?? "snapshot"}</strong>
+                <span>{snapshot.crawlJob?.status ?? "captured"}</span>
+                <span>{snapshot.capturedAt.toLocaleString()}</span>
+                <span>{snapshot.contentHash?.slice(0, 12) ?? "-"}</span>
+              </div>
+            ))}
+          </div>
         </aside>
       </div>
     </>

@@ -1,0 +1,4 @@
+# One product URL per line.
+# Copy real TikTok Shop/Affiliate product links here, then run:
+# npm run crawl:product-urls -- --file data/product-urls.txt --limit 100
+https://example.com/product/replace-me

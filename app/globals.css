@@ -288,6 +288,24 @@ textarea {
   padding: 12px 14px;
 }
 
+.crawl-history {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.crawl-history-item {
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 3px;
+  padding-top: 10px;
+}
+
+.crawl-history-item span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
 @media (max-width: 900px) {
   .shell,
   .detail-grid {

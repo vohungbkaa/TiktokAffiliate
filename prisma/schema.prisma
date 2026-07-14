@@ -11,17 +11,25 @@ model Product {
   id               String   @id @default(cuid())
   name             String
   productUrl       String   @unique
+  externalId       String?
+  imageUrl         String?
   category         String?
   shopName         String?
+  shopUrl          String?
   price            Decimal?
+  currency         String   @default("USD")
   commissionRate   Decimal?
   commissionAmount Decimal?
   soldCount        Int      @default(0)
   rating           Float?
   reviewCount      Int      @default(0)
   badReviewCount   Int      @default(0)
+  shopRating       Float?
   voucherInfo      String?
   shippingNote     String?
+  rawSource        String?
+  lastCrawledAt    DateTime?
+  status           String   @default("new")
   createdAt        DateTime @default(now())
   updatedAt        DateTime @updatedAt
 
@@ -41,6 +49,10 @@ model ProductReview {
   rating     Float?
   content    String
   isBad      Boolean  @default(false)
+  hasImage   Boolean  @default(false)
+  hasVideo   Boolean  @default(false)
+  source     String?
+  reviewedAt DateTime?
   capturedAt DateTime @default(now())
   createdAt  DateTime @default(now())
 
@@ -53,11 +65,15 @@ model ProductReview {
 model CrawlJob {
   id          String    @id @default(cuid())
   source      String
+  jobType     String    @default("product_detail")
   status      String    @default("queued")
   targetUrl   String?
+  attemptCount Int      @default(0)
   startedAt   DateTime?
   completedAt DateTime?
+  finishedAt  DateTime?
   error       String?
+  errorMessage String?
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
 
@@ -65,14 +81,21 @@ model CrawlJob {
 
   @@index([status])
   @@index([source])
+  @@index([jobType])
+  @@index([targetUrl])
 }
 
 model RawCrawlSnapshot {
   id        String   @id @default(cuid())
   productId String?
   crawlJobId String?
+  source    String?
   sourceUrl String
+  targetUrl String?
+  contentHash String?
   payload   Json
+  rawPayload Json?
+  capturedAt DateTime @default(now())
   createdAt DateTime @default(now())
 
   product Product? @relation(fields: [productId], references: [id], onDelete: SetNull)

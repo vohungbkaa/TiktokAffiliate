@@ -5,12 +5,16 @@ type ProductTableProps = {
   products: Product[];
 };
 
-function formatCurrency(value: unknown) {
+function formatCurrency(value: unknown, currency = "VND") {
   if (value === null || value === undefined) {
     return "-";
   }
 
-  return `$${Number(value).toFixed(2)}`;
+  return new Intl.NumberFormat("vi-VN", {
+    style: "currency",
+    currency,
+    maximumFractionDigits: currency === "VND" ? 0 : 2,
+  }).format(Number(value));
 }
 
 function formatPercent(value: unknown) {
@@ -53,10 +57,10 @@ export function ProductTable({ products }: ProductTableProps) {
                 </td>
                 <td>{product.category ?? "-"}</td>
                 <td>{product.shopName ?? "-"}</td>
-                <td>{formatCurrency(product.price)}</td>
+                <td>{formatCurrency(product.price, product.currency)}</td>
                 <td>
                   {formatPercent(product.commissionRate)}
-                  <div className="muted">{formatCurrency(product.commissionAmount)}</div>
+                  <div className="muted">{formatCurrency(product.commissionAmount, product.currency)}</div>
                 </td>
                 <td>{product.soldCount.toLocaleString()}</td>
                 <td>{product.rating ?? "-"}</td>
