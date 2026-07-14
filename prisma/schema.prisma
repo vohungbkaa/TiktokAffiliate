@@ -1,0 +1,83 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  id               String   @id @default(cuid())
+  name             String
+  productUrl       String   @unique
+  category         String?
+  shopName         String?
+  price            Decimal?
+  commissionRate   Decimal?
+  commissionAmount Decimal?
+  soldCount        Int      @default(0)
+  rating           Float?
+  reviewCount      Int      @default(0)
+  badReviewCount   Int      @default(0)
+  voucherInfo      String?
+  shippingNote     String?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  reviews      ProductReview[]
+  snapshots    RawCrawlSnapshot[]
+
+  @@index([category])
+  @@index([rating])
+  @@index([commissionRate])
+  @@index([soldCount])
+}
+
+model ProductReview {
+  id         String   @id @default(cuid())
+  productId  String
+  author     String?
+  rating     Float?
+  content    String
+  isBad      Boolean  @default(false)
+  capturedAt DateTime @default(now())
+  createdAt  DateTime @default(now())
+
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@index([productId])
+  @@index([isBad])
+}
+
+model CrawlJob {
+  id          String    @id @default(cuid())
+  source      String
+  status      String    @default("queued")
+  targetUrl   String?
+  startedAt   DateTime?
+  completedAt DateTime?
+  error       String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  snapshots RawCrawlSnapshot[]
+
+  @@index([status])
+  @@index([source])
+}
+
+model RawCrawlSnapshot {
+  id        String   @id @default(cuid())
+  productId String?
+  crawlJobId String?
+  sourceUrl String
+  payload   Json
+  createdAt DateTime @default(now())
+
+  product Product? @relation(fields: [productId], references: [id], onDelete: SetNull)
+  crawlJob CrawlJob? @relation(fields: [crawlJobId], references: [id], onDelete: SetNull)
+
+  @@index([productId])
+  @@index([crawlJobId])
+}

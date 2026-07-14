@@ -1,0 +1,13 @@
+.next
+node_modules
+dist
+coverage
+.env
+*.sqlite
+*.sqlite-journal
+*.db
+prisma/dev.db
+__pycache__
+.venv
+.DS_Store
+.idea

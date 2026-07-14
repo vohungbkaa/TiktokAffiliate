@@ -1,0 +1,51 @@
+name,product_url,category,shop_name,price,commission_rate,commission_amount,sold_count,rating,review_count,bad_review_count,voucher_info,shipping_note
+Mini Foam Roller,https://shop.example/products/mini-foam-roller,Fitness,Move Daily,14.99,12,1.80,5100,4.6,620,21,5% off,Standard shipping
+Clip On Reading Light,https://shop.example/products/clip-on-reading-light,Home,Book Nest,9.50,10,0.95,7400,4.5,810,36,Buy 2 save 8%,Ships in 1 day
+Silicone Air Fryer Liner,https://shop.example/products/silicone-air-fryer-liner,Kitchen,Daily Home,8.99,14,1.26,18300,4.7,2100,48,10% voucher,Free shipping
+Travel Cable Organizer,https://shop.example/products/travel-cable-organizer,Travel,Pack Right,12.49,11,1.37,8900,4.4,990,55,Bundle voucher,Standard shipping
+Magnetic Phone Mount,https://shop.example/products/magnetic-phone-mount,Automotive,Road Kit,15.75,13,2.05,12600,4.6,1410,44,Flash voucher,Ships in 2 days
+Reusable Makeup Pads,https://shop.example/products/reusable-makeup-pads,Beauty,Glow Lab,7.25,16,1.16,9700,4.5,730,28,Buy 3 save 10%,Free shipping
+Desk Cable Clips,https://shop.example/products/desk-cable-clips,Office,Tidy Desk,5.99,9,0.54,15200,4.3,880,64,No voucher,Standard shipping
+Pet Grooming Glove,https://shop.example/products/pet-grooming-glove,Pets,Paw Supply,10.50,12,1.26,11300,4.6,1330,40,5% off,Ships in 1 day
+Vegetable Chopper,https://shop.example/products/vegetable-chopper,Kitchen,Daily Home,19.99,15,3.00,20100,4.7,2840,79,10% off orders over $25,Free shipping
+Resistance Bands Set,https://shop.example/products/resistance-bands-set,Fitness,Move Daily,13.99,14,1.96,17600,4.6,2260,58,Bundle voucher,Standard shipping
+Foldable Laundry Basket,https://shop.example/products/foldable-laundry-basket,Home,Home Harbor,16.90,10,1.69,6600,4.4,710,30,5% voucher,Ships in 2 days
+LED Closet Light,https://shop.example/products/led-closet-light,Home,Bright Room,11.25,13,1.46,12100,4.5,1080,47,No voucher,Standard shipping
+Phone Camera Lens Kit,https://shop.example/products/phone-camera-lens-kit,Electronics,Creator Kit,22.00,17,3.74,5800,4.2,540,39,Creator voucher,Ships in 2 days
+Stainless Straw Set,https://shop.example/products/stainless-straw-set,Kitchen,Daily Home,6.49,8,0.52,13900,4.7,1250,22,Buy 2 save 5%,Free shipping
+Portable Shoe Bags,https://shop.example/products/portable-shoe-bags,Travel,Pack Right,8.75,9,0.79,8100,4.3,620,33,Travel voucher,Standard shipping
+Car Seat Gap Filler,https://shop.example/products/car-seat-gap-filler,Automotive,Road Kit,17.99,12,2.16,9200,4.4,880,41,5% off,Ships in 1 day
+Hair Scalp Massager,https://shop.example/products/hair-scalp-massager,Beauty,Glow Lab,6.99,15,1.05,24500,4.8,3100,35,No voucher,Free shipping
+Laptop Stand,https://shop.example/products/laptop-stand,Office,Tidy Desk,21.50,11,2.37,7600,4.6,980,26,Office voucher,Standard shipping
+Cat Window Hammock,https://shop.example/products/cat-window-hammock,Pets,Paw Supply,24.99,13,3.25,4300,4.5,510,24,Pet voucher,Ships in 3 days
+Digital Kitchen Scale,https://shop.example/products/digital-kitchen-scale,Kitchen,Daily Home,13.75,12,1.65,15100,4.7,1760,31,10% voucher,Free shipping
+Yoga Knee Pad,https://shop.example/products/yoga-knee-pad,Fitness,Move Daily,10.99,10,1.10,6900,4.5,600,20,No voucher,Standard shipping
+Drawer Dividers,https://shop.example/products/drawer-dividers,Home,Home Harbor,12.99,11,1.43,10100,4.4,950,45,Home voucher,Ships in 2 days
+Rechargeable Hand Warmer,https://shop.example/products/rechargeable-hand-warmer,Electronics,Creator Kit,18.99,14,2.66,5200,4.3,470,38,Seasonal voucher,Standard shipping
+Packing Cubes Set,https://shop.example/products/packing-cubes-set,Travel,Pack Right,20.50,12,2.46,11800,4.7,1350,29,Bundle voucher,Free shipping
+Tire Pressure Gauge,https://shop.example/products/tire-pressure-gauge,Automotive,Road Kit,9.99,10,1.00,8700,4.4,710,34,No voucher,Standard shipping
+Makeup Brush Cleaner,https://shop.example/products/makeup-brush-cleaner,Beauty,Glow Lab,14.99,16,2.40,6800,4.5,650,25,Beauty voucher,Ships in 1 day
+Monitor Memo Board,https://shop.example/products/monitor-memo-board,Office,Tidy Desk,7.99,9,0.72,9400,4.2,530,42,No voucher,Standard shipping
+Dog Travel Water Bottle,https://shop.example/products/dog-travel-water-bottle,Pets,Paw Supply,13.49,12,1.62,16200,4.7,1900,37,Pet voucher,Free shipping
+Measuring Spoon Set,https://shop.example/products/measuring-spoon-set,Kitchen,Daily Home,5.75,8,0.46,13200,4.6,840,18,Buy 2 save 5%,Standard shipping
+Ankle Strap Cable Attachment,https://shop.example/products/ankle-strap-cable-attachment,Fitness,Move Daily,11.99,13,1.56,5700,4.4,430,27,Gym voucher,Ships in 2 days
+Door Draft Stopper,https://shop.example/products/door-draft-stopper,Home,Home Harbor,15.25,10,1.53,7200,4.3,680,49,Home voucher,Standard shipping
+USB C Hub,https://shop.example/products/usb-c-hub,Electronics,Creator Kit,29.99,11,3.30,6100,4.4,730,44,Creator voucher,Ships in 2 days
+Hanging Toiletry Bag,https://shop.example/products/hanging-toiletry-bag,Travel,Pack Right,18.25,12,2.19,8300,4.6,960,31,Travel voucher,Free shipping
+Car Trash Can,https://shop.example/products/car-trash-can,Automotive,Road Kit,12.50,9,1.13,11100,4.3,850,52,No voucher,Standard shipping
+Facial Ice Roller,https://shop.example/products/facial-ice-roller,Beauty,Glow Lab,8.99,15,1.35,19600,4.6,2010,46,Beauty voucher,Free shipping
+Ergonomic Mouse Pad,https://shop.example/products/ergonomic-mouse-pad,Office,Tidy Desk,10.75,10,1.08,7800,4.4,690,32,Office voucher,Standard shipping
+Pet Slow Feeder Bowl,https://shop.example/products/pet-slow-feeder-bowl,Pets,Paw Supply,9.49,12,1.14,14300,4.5,1210,51,Pet voucher,Ships in 1 day
+Garlic Press,https://shop.example/products/garlic-press,Kitchen,Daily Home,8.50,10,0.85,12500,4.5,880,35,No voucher,Standard shipping
+Pilates Ring,https://shop.example/products/pilates-ring,Fitness,Move Daily,16.99,14,2.38,6400,4.4,590,30,Gym voucher,Free shipping
+Vacuum Storage Bags,https://shop.example/products/vacuum-storage-bags,Home,Home Harbor,22.99,12,2.76,13400,4.6,1560,60,Home voucher,Ships in 2 days
+Bluetooth Remote Shutter,https://shop.example/products/bluetooth-remote-shutter,Electronics,Creator Kit,6.99,18,1.26,17200,4.5,1150,43,Creator voucher,Standard shipping
+Luggage Scale,https://shop.example/products/luggage-scale,Travel,Pack Right,10.99,10,1.10,10400,4.6,940,24,Travel voucher,Free shipping
+Car Phone Charger,https://shop.example/products/car-phone-charger,Automotive,Road Kit,13.99,11,1.54,9800,4.4,800,36,No voucher,Standard shipping
+Heatless Curling Rod,https://shop.example/products/heatless-curling-rod,Beauty,Glow Lab,12.75,17,2.17,22100,4.7,2340,50,Beauty voucher,Free shipping
+Standing Desk Hook,https://shop.example/products/standing-desk-hook,Office,Tidy Desk,6.25,9,0.56,4500,4.2,390,22,Office voucher,Standard shipping
+Pet Nail Grinder,https://shop.example/products/pet-nail-grinder,Pets,Paw Supply,19.99,13,2.60,7600,4.3,710,57,Pet voucher,Ships in 2 days
+Oil Sprayer Bottle,https://shop.example/products/oil-sprayer-bottle,Kitchen,Daily Home,9.99,12,1.20,18800,4.7,2030,38,10% voucher,Free shipping
+Jump Rope,https://shop.example/products/jump-rope,Fitness,Move Daily,7.99,10,0.80,15700,4.5,1250,42,Gym voucher,Standard shipping
+Under Sink Organizer,https://shop.example/products/under-sink-organizer,Home,Home Harbor,24.50,11,2.70,8900,4.4,860,39,Home voucher,Ships in 2 days
+Portable Tripod,https://shop.example/products/portable-tripod,Electronics,Creator Kit,18.50,16,2.96,11900,4.6,1440,47,Creator voucher,Free shipping
