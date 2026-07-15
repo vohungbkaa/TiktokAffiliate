@@ -27,13 +27,12 @@ function formatPercent(value: unknown) {
 
 export function ProductTable({ products }: ProductTableProps) {
   if (products.length === 0) {
-    return <div className="card" style={{ textAlign: "center", padding: "40px", color: "var(--text-muted)" }}>No products yet.</div>;
+    return <div className="card" style={{ textAlign: "center", padding: "40px", color: "var(--text-muted)", border: "none", background: "transparent" }}>No products yet.</div>;
   }
 
   return (
-    <div className="panel">
-      <div className="table-wrap">
-        <table>
+    <div className="table-wrap">
+      <table>
           <thead>
             <tr>
               <th>Product Details</th>
@@ -127,6 +126,5 @@ export function ProductTable({ products }: ProductTableProps) {
           </tbody>
         </table>
       </div>
-    </div>
   );
 }

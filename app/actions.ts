@@ -85,14 +85,40 @@ export async function resetCrawlTarget(id: string) {
 }
 
 export async function startPendingCrawlTargets() {
+  const targets = await prisma.crawlTarget.findMany({
+    where: { status: { in: ["pending", "failed"] } },
+    select: { id: true },
+    orderBy: { createdAt: "asc" },
+  });
+  const targetIds = targets.map((target) => target.id);
+
+  if (targetIds.length === 0) {
+    revalidatePath("/crawler");
+    redirect("/crawler");
+  }
+
+  if (targetIds.length > 0) {
+    await prisma.crawlTarget.updateMany({
+      where: { id: { in: targetIds } },
+      data: {
+        status: "running",
+        lastStartedAt: new Date(),
+        lastFinishedAt: null,
+        lastError: null,
+        discoveredCount: 0,
+        crawledCount: 0,
+      },
+    });
+  }
+
   await mkdir("data", { recursive: true });
   const logPath = join(process.cwd(), "data", "crawl-targets.log");
   const logStream = createWriteStream(logPath, { flags: "a" });
-  logStream.write(`\n[${new Date().toISOString()}] start crawl targets\n`);
+  logStream.write(`\n[${new Date().toISOString()}] start crawl targets: ${targetIds.length} URL(s)\n`);
 
   const child = spawn("node", ["scripts/crawl-targets.mjs"], {
     cwd: process.cwd(),
-    env: process.env,
+    env: { ...process.env, CRAWL_TARGET_IDS: targetIds.join(",") },
     stdio: ["ignore", "pipe", "pipe"],
   });
 

@@ -141,8 +141,16 @@ export function ProductForm({ action, product, submitLabel }: ProductFormProps) 
           </div>
         </div>
         <div className="form-actions">
-          <button type="submit">{submitLabel}</button>
+          <button type="submit">
+            <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" style={{ marginRight: "4px" }}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+            {submitLabel}
+          </button>
           <Link className="button secondary" href={product ? `/products/${product.id}` : "/products"}>
+            <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" style={{ marginRight: "4px" }}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
             Cancel
           </Link>
         </div>

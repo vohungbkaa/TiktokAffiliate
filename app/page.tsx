@@ -26,6 +26,9 @@ export default async function DashboardPage() {
           <p>Manual product database, CSV import, and crawler foundation.</p>
         </div>
         <Link className="button" href="/products/new">
+          <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" style={{ marginRight: "4px" }}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+          </svg>
           Add Product
         </Link>
       </div>

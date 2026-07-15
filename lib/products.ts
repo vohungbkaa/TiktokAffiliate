@@ -7,6 +7,8 @@ export type ProductFilters = {
   minCommission?: string;
   minSold?: string;
   sort?: string;
+  page?: string;
+  pageSize?: string;
 };
 
 export type ProductFormState = {
@@ -92,6 +94,15 @@ export function productDataFromForm(formData: FormData) {
   };
 }
 
+function filterNumber(value: string | undefined) {
+  if (!value || value.trim() === "") {
+    return null;
+  }
+
+  const parsed = Number(value);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
 export function buildProductQuery(filters: ProductFilters) {
   const where: Prisma.ProductWhereInput = {};
   const orderBy: Prisma.ProductOrderByWithRelationInput = {};
@@ -100,18 +111,18 @@ export function buildProductQuery(filters: ProductFilters) {
     where.category = filters.category;
   }
 
-  const minRating = Number(filters.minRating);
-  if (Number.isFinite(minRating)) {
+  const minRating = filterNumber(filters.minRating);
+  if (minRating !== null) {
     where.rating = { gte: minRating };
   }
 
-  const minCommission = Number(filters.minCommission);
-  if (Number.isFinite(minCommission)) {
+  const minCommission = filterNumber(filters.minCommission);
+  if (minCommission !== null) {
     where.commissionRate = { gte: minCommission };
   }
 
-  const minSold = Number(filters.minSold);
-  if (Number.isFinite(minSold)) {
+  const minSold = filterNumber(filters.minSold);
+  if (minSold !== null) {
     where.soldCount = { gte: Math.trunc(minSold) };
   }
 

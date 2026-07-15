@@ -6,6 +6,7 @@ import {
   resetCrawlTarget,
   startPendingCrawlTargets,
 } from "@/app/actions";
+import { CrawlerAutoRefresh } from "@/components/CrawlerAutoRefresh";
 import { effectiveCrawlTargetStatus, getCrawlTargetProgress } from "@/lib/crawl-target-progress";
 import { prisma } from "@/lib/prisma";
 
@@ -51,9 +52,12 @@ export default async function CrawlerPage() {
   const recentLog = existsSync(logFile)
     ? readFileSync(logFile, "utf8").split("\n").slice(-24).join("\n").trim()
     : "";
+  const isCrawlLogActive = recentLog.includes("start crawl targets") && !recentLog.includes("finish crawl targets");
+  const shouldAutoRefresh = isCrawlLogActive || targetRows.some(({ status }) => status === "running");
 
   return (
     <>
+      <CrawlerAutoRefresh enabled={shouldAutoRefresh} />
       <div className="page-header">
         <div>
           <h1>Crawler URLs</h1>
@@ -151,17 +155,24 @@ export default async function CrawlerPage() {
                     </td>
                     <td>
                       <div className="button-group">
-                        <Link className="button secondary" href={`/crawler/${target.id}`}>
-                          Detail
+                        <Link className="button secondary icon-only" href={`/crawler/${target.id}`} title="View Detail Progress">
+                          <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>
                         </Link>
                         <form action={resetCrawlTarget.bind(null, target.id)}>
-                          <button type="submit" className="secondary">
-                            Reset
+                          <button type="submit" className="secondary icon-only" title="Reset Crawl Target Status">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                            </svg>
                           </button>
                         </form>
                         <form action={deleteCrawlTarget.bind(null, target.id)}>
-                          <button type="submit" className="secondary danger-button">
-                            Delete
+                          <button type="submit" className="secondary danger-button icon-only" title="Delete Crawl Target">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                            </svg>
                           </button>
                         </form>
                       </div>

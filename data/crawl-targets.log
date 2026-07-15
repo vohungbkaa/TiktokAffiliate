@@ -1,0 +1,463 @@
+
+[2026-07-15T14:04:50.368Z] start crawl targets
+
+[2026-07-15T14:04:56.318Z] start crawl targets
+No pending crawl targets.
+[2026-07-15T14:04:56.506Z] finish crawl targets: code 0
+[2026-07-15 21:05:02] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/c/instant-noodles/700644?source=ecommerce_category&enter_method=categories&first_entrance=ecommerce_mall&first_entrance_position=region_not_match&first_entrance_tt_scene=seo&btm_pre=a2270.b8314.c37357.d69217_i1&btm_pre_show_id=00e0e0b6-7709-417f-91d9-dc385349ea7e&btm_transfer_id=5a896bcc-cfca-464c-8aa4-e5af751afc81&btm_ppre=a2270.b8314.c37357.d69217_i0> (referer: https://www.google.com/)
+[2026-07-15 21:05:11] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/c/food-beverages/700437> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/c/instant-noodles/700644?source=ecommerce_category&enter_method=categories&first_entrance=ecommerce_mall&first_entrance_position=region_not_match&first_entrance_tt_scene=seo&btm_pre=a2270.b8314.c37357.d69217_i1&btm_pre_show_id=00e0e0b6-7709-417f-91d9-dc385349ea7e&btm_transfer_id=5a896bcc-cfca-464c-8aa4-e5af751afc81&btm_ppre=a2270.b8314.c37357.d69217_i0 via dynamic
+expanding category: https://shop.tiktok.com/vn/c/food-beverages/700437
+fetch attempt 1/3: https://shop.tiktok.com/vn/c/food-beverages/700437 via dynamic
+completed product_list: 25 links
+https://shop.tiktok.com/vn/pdp/1735625523771443113
+https://shop.tiktok.com/vn/pdp/1735665746293917608
+https://shop.tiktok.com/vn/pdp/combo-mi-udon-264gr-sieu-vi-ngon-tien-loi-cho-moi-ngay/1733104941975045698
+https://shop.tiktok.com/vn/pdp/1733943376622814860
+https://shop.tiktok.com/vn/pdp/1730474739360500380
+https://shop.tiktok.com/vn/pdp/mi-tom-an-lien-tre-em-pho-mai-truyen-thong-cay-ngon/1729638686169597954
+https://shop.tiktok.com/vn/pdp/set-nau-tokbokki-nho-nguyen-lieu-han-quoc-250g-xot-cha-ca/1731160376671373755
+https://shop.tiktok.com/vn/pdp/thung-30-goi-bun-rieu-huong-bep-70gram-goi-tien-loi-ngon/1730694470844713050
+https://shop.tiktok.com/vn/pdp/mi-vi-bo-cay-koreno-jumbo-thung-100-goi-soi-mem-dai-huong-vi-ngon/1733250296769119810
+https://shop.tiktok.com/vn/pdp/mien-dong-soi-to-1kg-khong-trang-khong-nat-kho-lau/1729694916976675371
+https://shop.tiktok.com/vn/pdp/thung-30-goi-mi-tay-cung-dinh-huong-vi-bo-h/1733339121332946326
+https://shop.tiktok.com/vn/pdp/mi-tron-yesmom-vi-cua-singapore-huong-vi-doc-dao-tien-loi/1729776677182736474
+https://shop.tiktok.com/vn/pdp/si-combo-60-goi-mieng-cay-cay-suon-de-nuong-bimbim-an-vat/1733530910513333545
+https://shop.tiktok.com/vn/pdp/thung-mi-kokomi-tom-chua-cay-30-goi-x-65g-huong-vi-doc-dao/1731806736498001940
+https://shop.tiktok.com/vn/pdp/1731449086037494050
+https://shop.tiktok.com/vn/pdp/keo-tuoi-bo-xoai-ben-tre-huong-vi-tu-nhien-de-an/1732578023673398694
+https://shop.tiktok.com/vn/pdp/tra-ca-gai-leo-xa-den-sadu-tui-loc-50-goi-250g-de-su-dung/1730255482093799941
+https://shop.tiktok.com/vn/pdp/toan-hat-mix-4-loai-khong-yen-mach-bi-hoa-qua/1731660156220704426
+https://shop.tiktok.com/vn/pdp/1736198172504262037
+https://shop.tiktok.com/vn/pdp/banh-quy-man-mix-vi-tui-500g-gion-ngon-cho-moi-lua-tuoi/1729757695040654268
+https://shop.tiktok.com/vn/pdp/tra-tui-loc-rau-muong-nghe-vang-ho-tro-o-nong-viem-loet/1735060376831952631
+https://shop.tiktok.com/vn/pdp/doc-quyen-live-stream-sot-cham-caytedai-x1-cay-vua-450gr/1731257561261638735
+https://shop.tiktok.com/vn/pdp/trung-cut-pha-lau-hop-10-qua-v-food-tien-dung-an-toan/1729645810927831430
+https://shop.tiktok.com/vn/pdp/keo-oishi-goi-30-vien-huong-qua-trai-cay-khong-duong/1729820700553349561
+https://shop.tiktok.com/vn/pdp/nam-loc-nhung-1kg-gion-ngot-tang-cuong-suc-khoe-de-khang/1731682377561049145
+[2026-07-15 21:05:13] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/1735625523771443113> (referer: https://www.google.com/)
+[2026-07-15 21:05:14] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/1735665746293917608> (referer: https://www.google.com/)
+[2026-07-15 21:05:16] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/combo-mi-udon-264gr-sieu-vi-ngon-tien-loi-cho-moi-ngay/1733104941975045698> (referer: https://www.google.com/)
+[2026-07-15 21:05:18] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/1733943376622814860> (referer: https://www.google.com/)
+[2026-07-15 21:05:20] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/1730474739360500380> (referer: https://www.google.com/)
+[2026-07-15 21:05:26] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/mi-tom-an-lien-tre-em-pho-mai-truyen-thong-cay-ngon/1729638686169597954> (referer: https://www.google.com/)
+[2026-07-15 21:05:30] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/set-nau-tokbokki-nho-nguyen-lieu-han-quoc-250g-xot-cha-ca/1731160376671373755> (referer: https://www.google.com/)
+[2026-07-15 21:05:31] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/thung-30-goi-bun-rieu-huong-bep-70gram-goi-tien-loi-ngon/1730694470844713050> (referer: https://www.google.com/)
+[2026-07-15 21:05:33] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/mi-vi-bo-cay-koreno-jumbo-thung-100-goi-soi-mem-dai-huong-vi-ngon/1733250296769119810> (referer: https://www.google.com/)
+[2026-07-15 21:05:35] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/mien-dong-soi-to-1kg-khong-trang-khong-nat-kho-lau/1729694916976675371> (referer: https://www.google.com/)
+[2026-07-15 21:05:37] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/thung-30-goi-mi-tay-cung-dinh-huong-vi-bo-h/1733339121332946326> (referer: https://www.google.com/)
+[2026-07-15 21:05:39] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/mi-tron-yesmom-vi-cua-singapore-huong-vi-doc-dao-tien-loi/1729776677182736474> (referer: https://www.google.com/)
+[2026-07-15 21:05:40] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/si-combo-60-goi-mieng-cay-cay-suon-de-nuong-bimbim-an-vat/1733530910513333545> (referer: https://www.google.com/)
+[2026-07-15 21:05:42] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/thung-mi-kokomi-tom-chua-cay-30-goi-x-65g-huong-vi-doc-dao/1731806736498001940> (referer: https://www.google.com/)
+[2026-07-15 21:05:44] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/1731449086037494050> (referer: https://www.google.com/)
+[2026-07-15 21:05:46] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/keo-tuoi-bo-xoai-ben-tre-huong-vi-tu-nhien-de-an/1732578023673398694> (referer: https://www.google.com/)
+[2026-07-15 21:05:48] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/tra-ca-gai-leo-xa-den-sadu-tui-loc-50-goi-250g-de-su-dung/1730255482093799941> (referer: https://www.google.com/)
+[2026-07-15 21:05:54] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/toan-hat-mix-4-loai-khong-yen-mach-bi-hoa-qua/1731660156220704426> (referer: https://www.google.com/)
+[2026-07-15 21:05:56] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/1736198172504262037> (referer: https://www.google.com/)
+[2026-07-15 21:05:58] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/banh-quy-man-mix-vi-tui-500g-gion-ngon-cho-moi-lua-tuoi/1729757695040654268> (referer: https://www.google.com/)
+[2026-07-15 21:06:03] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/tra-tui-loc-rau-muong-nghe-vang-ho-tro-o-nong-viem-loet/1735060376831952631> (referer: https://www.google.com/)
+[2026-07-15 21:06:07] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/doc-quyen-live-stream-sot-cham-caytedai-x1-cay-vua-450gr/1731257561261638735> (referer: https://www.google.com/)
+[2026-07-15 21:06:09] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/trung-cut-pha-lau-hop-10-qua-v-food-tien-dung-an-toan/1729645810927831430> (referer: https://www.google.com/)
+[2026-07-15 21:06:11] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/keo-oishi-goi-30-vien-huong-qua-trai-cay-khong-duong/1729820700553349561> (referer: https://www.google.com/)
+[2026-07-15 21:06:13] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/nam-loc-nhung-1kg-gion-ngot-tang-cuong-suc-khoe-de-khang/1731682377561049145> (referer: https://www.google.com/)
+batch crawl started: 25 URLs
+[1/25] https://shop.tiktok.com/vn/pdp/1735625523771443113
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/1735625523771443113 via fetcher
+completed product_detail: product_id=1735625523771443113, reviews=3
+[2/25] https://shop.tiktok.com/vn/pdp/1735665746293917608
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/1735665746293917608 via fetcher
+completed product_detail: product_id=1735665746293917608, reviews=3
+[3/25] https://shop.tiktok.com/vn/pdp/combo-mi-udon-264gr-sieu-vi-ngon-tien-loi-cho-moi-ngay/1733104941975045698
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/combo-mi-udon-264gr-sieu-vi-ngon-tien-loi-cho-moi-ngay/1733104941975045698 via fetcher
+completed product_detail: product_id=1733104941975045698, reviews=3
+[4/25] https://shop.tiktok.com/vn/pdp/1733943376622814860
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/1733943376622814860 via fetcher
+completed product_detail: product_id=1733943376622814860, reviews=3
+[5/25] https://shop.tiktok.com/vn/pdp/1730474739360500380
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/1730474739360500380 via fetcher
+completed product_detail: product_id=1730474739360500380, reviews=3
+[6/25] https://shop.tiktok.com/vn/pdp/mi-tom-an-lien-tre-em-pho-mai-truyen-thong-cay-ngon/1729638686169597954
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/mi-tom-an-lien-tre-em-pho-mai-truyen-thong-cay-ngon/1729638686169597954 via fetcher
+completed product_detail: product_id=1729638686169597954, reviews=3
+[7/25] https://shop.tiktok.com/vn/pdp/set-nau-tokbokki-nho-nguyen-lieu-han-quoc-250g-xot-cha-ca/1731160376671373755
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/set-nau-tokbokki-nho-nguyen-lieu-han-quoc-250g-xot-cha-ca/1731160376671373755 via fetcher
+completed product_detail: product_id=1731160376671373755, reviews=3
+[8/25] https://shop.tiktok.com/vn/pdp/thung-30-goi-bun-rieu-huong-bep-70gram-goi-tien-loi-ngon/1730694470844713050
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/thung-30-goi-bun-rieu-huong-bep-70gram-goi-tien-loi-ngon/1730694470844713050 via fetcher
+completed product_detail: product_id=1730694470844713050, reviews=3
+[9/25] https://shop.tiktok.com/vn/pdp/mi-vi-bo-cay-koreno-jumbo-thung-100-goi-soi-mem-dai-huong-vi-ngon/1733250296769119810
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/mi-vi-bo-cay-koreno-jumbo-thung-100-goi-soi-mem-dai-huong-vi-ngon/1733250296769119810 via fetcher
+completed product_detail: product_id=1733250296769119810, reviews=2
+[10/25] https://shop.tiktok.com/vn/pdp/mien-dong-soi-to-1kg-khong-trang-khong-nat-kho-lau/1729694916976675371
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/mien-dong-soi-to-1kg-khong-trang-khong-nat-kho-lau/1729694916976675371 via fetcher
+completed product_detail: product_id=1729694916976675371, reviews=3
+[11/25] https://shop.tiktok.com/vn/pdp/thung-30-goi-mi-tay-cung-dinh-huong-vi-bo-h/1733339121332946326
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/thung-30-goi-mi-tay-cung-dinh-huong-vi-bo-h/1733339121332946326 via fetcher
+completed product_detail: product_id=1733339121332946326, reviews=2
+[12/25] https://shop.tiktok.com/vn/pdp/mi-tron-yesmom-vi-cua-singapore-huong-vi-doc-dao-tien-loi/1729776677182736474
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/mi-tron-yesmom-vi-cua-singapore-huong-vi-doc-dao-tien-loi/1729776677182736474 via fetcher
+completed product_detail: product_id=1729776677182736474, reviews=3
+[13/25] https://shop.tiktok.com/vn/pdp/si-combo-60-goi-mieng-cay-cay-suon-de-nuong-bimbim-an-vat/1733530910513333545
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/si-combo-60-goi-mieng-cay-cay-suon-de-nuong-bimbim-an-vat/1733530910513333545 via fetcher
+completed product_detail: product_id=1733530910513333545, reviews=3
+[14/25] https://shop.tiktok.com/vn/pdp/thung-mi-kokomi-tom-chua-cay-30-goi-x-65g-huong-vi-doc-dao/1731806736498001940
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/thung-mi-kokomi-tom-chua-cay-30-goi-x-65g-huong-vi-doc-dao/1731806736498001940 via fetcher
+completed product_detail: product_id=1731806736498001940, reviews=3
+[15/25] https://shop.tiktok.com/vn/pdp/1731449086037494050
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/1731449086037494050 via fetcher
+completed product_detail: product_id=1731449086037494050, reviews=3
+[16/25] https://shop.tiktok.com/vn/pdp/keo-tuoi-bo-xoai-ben-tre-huong-vi-tu-nhien-de-an/1732578023673398694
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/keo-tuoi-bo-xoai-ben-tre-huong-vi-tu-nhien-de-an/1732578023673398694 via fetcher
+completed product_detail: product_id=1732578023673398694, reviews=3
+[17/25] https://shop.tiktok.com/vn/pdp/tra-ca-gai-leo-xa-den-sadu-tui-loc-50-goi-250g-de-su-dung/1730255482093799941
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/tra-ca-gai-leo-xa-den-sadu-tui-loc-50-goi-250g-de-su-dung/1730255482093799941 via fetcher
+completed product_detail: product_id=1730255482093799941, reviews=3
+[18/25] https://shop.tiktok.com/vn/pdp/toan-hat-mix-4-loai-khong-yen-mach-bi-hoa-qua/1731660156220704426
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/toan-hat-mix-4-loai-khong-yen-mach-bi-hoa-qua/1731660156220704426 via fetcher
+completed product_detail: product_id=1731660156220704426, reviews=3
+[19/25] https://shop.tiktok.com/vn/pdp/1736198172504262037
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/1736198172504262037 via fetcher
+completed product_detail: product_id=1736198172504262037, reviews=3
+[20/25] https://shop.tiktok.com/vn/pdp/banh-quy-man-mix-vi-tui-500g-gion-ngon-cho-moi-lua-tuoi/1729757695040654268
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/banh-quy-man-mix-vi-tui-500g-gion-ngon-cho-moi-lua-tuoi/1729757695040654268 via fetcher
+completed product_detail: product_id=1729757695040654268, reviews=3
+[21/25] https://shop.tiktok.com/vn/pdp/tra-tui-loc-rau-muong-nghe-vang-ho-tro-o-nong-viem-loet/1735060376831952631
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/tra-tui-loc-rau-muong-nghe-vang-ho-tro-o-nong-viem-loet/1735060376831952631 via fetcher
+completed product_detail: product_id=1735060376831952631, reviews=3
+[22/25] https://shop.tiktok.com/vn/pdp/doc-quyen-live-stream-sot-cham-caytedai-x1-cay-vua-450gr/1731257561261638735
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/doc-quyen-live-stream-sot-cham-caytedai-x1-cay-vua-450gr/1731257561261638735 via fetcher
+completed product_detail: product_id=1731257561261638735, reviews=3
+[23/25] https://shop.tiktok.com/vn/pdp/trung-cut-pha-lau-hop-10-qua-v-food-tien-dung-an-toan/1729645810927831430
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/trung-cut-pha-lau-hop-10-qua-v-food-tien-dung-an-toan/1729645810927831430 via fetcher
+completed product_detail: product_id=1729645810927831430, reviews=3
+[24/25] https://shop.tiktok.com/vn/pdp/keo-oishi-goi-30-vien-huong-qua-trai-cay-khong-duong/1729820700553349561
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/keo-oishi-goi-30-vien-huong-qua-trai-cay-khong-duong/1729820700553349561 via fetcher
+completed product_detail: product_id=1729820700553349561, reviews=3
+[25/25] https://shop.tiktok.com/vn/pdp/nam-loc-nhung-1kg-gion-ngot-tang-cuong-suc-khoe-de-khang/1731682377561049145
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/nam-loc-nhung-1kg-gion-ngot-tang-cuong-suc-khoe-de-khang/1731682377561049145 via fetcher
+completed product_detail: product_id=1731682377561049145, reviews=3
+batch crawl completed: success=25, failed=0
+[2026-07-15T14:06:13.293Z] finish crawl targets: code 0
+
+[2026-07-15T14:16:04.189Z] start crawl targets
+[2026-07-15 21:16:11] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/c/instant-noodles/700644?source=ecommerce_category&enter_method=categories&first_entrance=ecommerce_mall&first_entrance_position=region_not_match&first_entrance_tt_scene=seo&btm_pre=a2270.b8314.c37357.d69217_i1&btm_pre_show_id=00e0e0b6-7709-417f-91d9-dc385349ea7e&btm_transfer_id=5a896bcc-cfca-464c-8aa4-e5af751afc81&btm_ppre=a2270.b8314.c37357.d69217_i0> (referer: https://www.google.com/)
+
+[2026-07-15T14:16:17.675Z] start crawl targets
+[2026-07-15 21:16:20] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/c/food-beverages/700437> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/c/instant-noodles/700644?source=ecommerce_category&enter_method=categories&first_entrance=ecommerce_mall&first_entrance_position=region_not_match&first_entrance_tt_scene=seo&btm_pre=a2270.b8314.c37357.d69217_i1&btm_pre_show_id=00e0e0b6-7709-417f-91d9-dc385349ea7e&btm_transfer_id=5a896bcc-cfca-464c-8aa4-e5af751afc81&btm_ppre=a2270.b8314.c37357.d69217_i0 via dynamic
+expanding category: https://shop.tiktok.com/vn/c/food-beverages/700437
+fetch attempt 1/3: https://shop.tiktok.com/vn/c/food-beverages/700437 via dynamic
+completed product_list: 25 links
+https://shop.tiktok.com/vn/pdp/1731964264488929111
+https://shop.tiktok.com/vn/pdp/mi-tron-fitme-vi-tom-kieu-hawaii-thung-12-to-tien-loi-ngot/1731670173492086874
+https://shop.tiktok.com/vn/pdp/combo-6-goi-mi-cay-co-tam-kim-chi-de-nau-ngon-hon/1731422604512102738
+https://shop.tiktok.com/vn/pdp/mi-tokyo-noodle-nhat-ban-tien-loi-cho-be-tu-18-thang/1731957284106831503
+https://shop.tiktok.com/vn/pdp/1736156300877136945
+https://shop.tiktok.com/vn/pdp/1735954659647981489
+https://shop.tiktok.com/vn/pdp/1735339597515752828
+https://shop.tiktok.com/vn/pdp/mix-du-vi-mi-tron-indomie-vi-dac-biet-80g-x-thung-40-goi/1732520433699030295
+https://shop.tiktok.com/vn/pdp/mi-soi-tron-balducci-500gr-phu-hop-lam-mi-tuong-den-tron/1730896630641822150
+https://shop.tiktok.com/vn/pdp/set-5-10-goi-banh-da-cua-tom-vifon-60g-an-toan-tien-loi/1730474545717807772
+https://shop.tiktok.com/vn/pdp/combo-mien-dong-soi-to-nho-1kg-san-pham-sung-bau/1729578959156382594
+https://shop.tiktok.com/vn/pdp/vifon-mien-an-lien-3-vi-lau-thai-suon-heo-mang-vit/1730978319954709183
+https://shop.tiktok.com/vn/pdp/banh-canh-bot-mi-kho-phuoc-hanh-1kg-dac-san-hue-mon-ngon-tien-loi/1734211424094095207
+https://shop.tiktok.com/vn/pdp/combo-20-goi-chan-ga-te-cay-rut-xuong-an-toan-dam-da/1731834513264970097
+https://shop.tiktok.com/vn/pdp/1734122868581303983
+https://shop.tiktok.com/vn/pdp/1735262328240768090
+https://shop.tiktok.com/vn/pdp/hop-50-goi-khuyet-nha-chay-vi-cay-an-lien-sieu-ngon-thuc-an-nhe/1733259121712203010
+https://shop.tiktok.com/vn/pdp/thung-24-ly-mi-tom-chua-cay-yes-mom-co-79-2g-ly/1732733161913157383
+https://shop.tiktok.com/vn/pdp/tam-cay-den-nuong-hang-dai-60-goi-nho-7g-goi-xuat-xu-vn/1730622892983421404
+https://shop.tiktok.com/vn/pdp/1733251058705204774
+https://shop.tiktok.com/vn/pdp/1735138878776444636
+https://shop.tiktok.com/vn/pdp/banh-trang-ria-u-bo-500g-mem-deo-thom-bo-tang-muoi/1731640548846830622
+https://shop.tiktok.com/vn/pdp/thanh-lon-mien-dong-thai-tay-soi-to-de-nau-mi-pho-lau/1729698967153445152
+https://shop.tiktok.com/vn/pdp/combo-4-nuoc-cham-nam-ngu-ot-toi-ly-son-300ml-huong-que/1731159602776606680
+https://shop.tiktok.com/vn/pdp/dau-phong-da-ca-cot-dua-500gr-thom-gion-ngon-halal/1734906659604497909
+PrismaClientKnownRequestError: 
+Invalid `prisma.crawlTarget.update()` invocation:
+
+
+An operation failed because it depends on one or more records that were required but not found. No record was found for an update.
+    at ei.handleRequestError (/Users/vvhung/Documents/Projects/TiktokAffiliate/node_modules/@prisma/client/src/runtime/RequestHandler.ts:228:13)
+    at ei.handleAndLogRequestError (/Users/vvhung/Documents/Projects/TiktokAffiliate/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/vvhung/Documents/Projects/TiktokAffiliate/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at async a (/Users/vvhung/Documents/Projects/TiktokAffiliate/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at async main (file:///Users/vvhung/Documents/Projects/TiktokAffiliate/scripts/crawl-targets.mjs:160:7) {
+  code: 'P2025',
+  meta: {
+    modelName: 'CrawlTarget',
+    cause: 'No record was found for an update.'
+  },
+  clientVersion: '6.19.3'
+}
+[2026-07-15T14:16:21.053Z] finish crawl targets: code 1
+[2026-07-15 21:16:29] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/c/snacks/915336?source=ecommerce_category&enter_method=categories&first_entrance=ecommerce_mall&first_entrance_position=region_not_match&first_entrance_tt_scene=seo&btm_pre=a2270.b8314.c37357.d69217_i2&btm_pre_show_id=02424f98-3c1b-418b-bf0f-1a7595dd95c2&btm_transfer_id=0737c32b-3efa-4093-a885-2f6be59fc7de&btm_ppre=a2270.b8314.c0.d0> (referer: https://www.google.com/)
+[2026-07-15 21:16:38] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/c/chocolate-chocolate-snacks/700768> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/c/snacks/915336?source=ecommerce_category&enter_method=categories&first_entrance=ecommerce_mall&first_entrance_position=region_not_match&first_entrance_tt_scene=seo&btm_pre=a2270.b8314.c37357.d69217_i2&btm_pre_show_id=02424f98-3c1b-418b-bf0f-1a7595dd95c2&btm_transfer_id=0737c32b-3efa-4093-a885-2f6be59fc7de&btm_ppre=a2270.b8314.c0.d0 via dynamic
+expanding category: https://shop.tiktok.com/vn/c/chocolate-chocolate-snacks/700768
+fetch attempt 1/3: https://shop.tiktok.com/vn/c/chocolate-chocolate-snacks/700768 via dynamic
+completed product_list: 25 links
+https://shop.tiktok.com/vn/pdp/lang-say-deo-da-lat-1kg-khong-duong-tui-zip-500g-1kg/1731027214193298248
+https://shop.tiktok.com/vn/pdp/keo-tet-ngon-2026-cua-three-squirrels-lop-nhan-kem-mem-tan-chay/1733104303617901865
+https://shop.tiktok.com/vn/pdp/1735567902663673442
+https://shop.tiktok.com/vn/pdp/1736324255384897158
+https://shop.tiktok.com/vn/pdp/banh-trang-phoi-suong-muoi-sac-do-an-vat-cay-snack/1729620040473545673
+https://shop.tiktok.com/vn/pdp/1734889657501255404
+https://shop.tiktok.com/vn/pdp/com-chay-mam-hanh-gion-rum-man-ngot-snack-ngon-mieng/1734752307261376496
+https://shop.tiktok.com/vn/pdp/banh-quy-bo-sua-socola-lss-mix-8-vi-snack-an-vat-doc-dao-gion-tan-nhieu-topping-huong-vi-hap-dan/1730633879529753082
+https://shop.tiktok.com/vn/pdp/banh-trang-deo-bo-chua-cay-200gr-vi-chua-cay-dam-da-mon-an-vat-thich-hop/1733974633033008158
+https://shop.tiktok.com/vn/pdp/1729740241634756896
+https://shop.tiktok.com/vn/pdp/hat-ngu-coc-ganyuan-du-dinh-duong-khong-chat-bao-quan/1731380413090071768
+https://shop.tiktok.com/vn/pdp/combo-12b-banh-mini-xau-vo-dau-toi-mon-an-truyen-thong/1733540954424182187
+https://shop.tiktok.com/vn/pdp/keo-deo-mix-vi-trai-cay-keo-chip-chip-phu-duong-100g-250g-500g/1734734381859833461
+https://shop.tiktok.com/vn/pdp/combo-2-hu-keo-so-co-la-nhan-dau-phong-snickers-jar-768g/1731551414971106355
+https://shop.tiktok.com/vn/pdp/combo-3-goi-rong-bien-su-tu-128g-de-pha-tien-loi/1731990072002120264
+https://shop.tiktok.com/vn/pdp/hop-23-25-goi-socola-den-it-duong-nguyen-chat-meo-ban-banh/1733244520785086119
+https://shop.tiktok.com/vn/pdp/kinder-joy-chocolate-surprise-egg-toy-gift-20g-ferrero/1733391371416209048
+https://shop.tiktok.com/vn/pdp/keo-socola-trai-tim-vang-100-vien-qua-tang-tien-loi-thom/1732751662547305871
+https://shop.tiktok.com/vn/pdp/1735041508491429646
+https://shop.tiktok.com/vn/pdp/banh-socola-nabati-nextar-112g-3-vi-thom-ngon-an-vat-hap-dan/1730312531164629303
+https://shop.tiktok.com/vn/pdp/1731842500424533250
+https://shop.tiktok.com/vn/pdp/socola-hersheys-miniatures-my-500g-nhieu-vi-thom-ngon/1729446699999987915
+https://shop.tiktok.com/vn/pdp/keo-socola-p-n-goi-30-tui-thom-ngon-han-su-dung-12-thang/1729444117478345646
+https://shop.tiktok.com/vn/pdp/socola-nguyen-chat-100-khong-duong-qua-tang-y-nghia-120g-hop/1733896981858846163
+https://shop.tiktok.com/vn/pdp/keo-nhong-socola-thom-ngon-100g-do-an-vat-ngot-ngao/1732524595857753256
+batch crawl started: 25 URLs
+[1/25] https://shop.tiktok.com/vn/pdp/lang-say-deo-da-lat-1kg-khong-duong-tui-zip-500g-1kg/1731027214193298248
+[2026-07-15 21:16:39] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/lang-say-deo-da-lat-1kg-khong-duong-tui-zip-500g-1kg/1731027214193298248> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/lang-say-deo-da-lat-1kg-khong-duong-tui-zip-500g-1kg/1731027214193298248 via fetcher
+completed product_detail: product_id=1731027214193298248, reviews=3
+[2/25] https://shop.tiktok.com/vn/pdp/keo-tet-ngon-2026-cua-three-squirrels-lop-nhan-kem-mem-tan-chay/1733104303617901865
+[2026-07-15 21:16:40] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/keo-tet-ngon-2026-cua-three-squirrels-lop-nhan-kem-mem-tan-chay/1733104303617901865> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/keo-tet-ngon-2026-cua-three-squirrels-lop-nhan-kem-mem-tan-chay/1733104303617901865 via fetcher
+completed product_detail: product_id=1733104303617901865, reviews=3
+[3/25] https://shop.tiktok.com/vn/pdp/1735567902663673442
+[2026-07-15 21:16:41] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/1735567902663673442> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/1735567902663673442 via fetcher
+completed product_detail: product_id=1735567902663673442, reviews=3
+[4/25] https://shop.tiktok.com/vn/pdp/1736324255384897158
+[2026-07-15 21:16:42] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/1736324255384897158> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/1736324255384897158 via fetcher
+completed product_detail: product_id=1736324255384897158, reviews=0
+[5/25] https://shop.tiktok.com/vn/pdp/banh-trang-phoi-suong-muoi-sac-do-an-vat-cay-snack/1729620040473545673
+[2026-07-15 21:16:43] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/banh-trang-phoi-suong-muoi-sac-do-an-vat-cay-snack/1729620040473545673> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/banh-trang-phoi-suong-muoi-sac-do-an-vat-cay-snack/1729620040473545673 via fetcher
+completed product_detail: product_id=1729620040473545673, reviews=3
+[6/25] https://shop.tiktok.com/vn/pdp/1734889657501255404
+[2026-07-15 21:16:44] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/1734889657501255404> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/1734889657501255404 via fetcher
+completed product_detail: product_id=1734889657501255404, reviews=3
+[7/25] https://shop.tiktok.com/vn/pdp/com-chay-mam-hanh-gion-rum-man-ngot-snack-ngon-mieng/1734752307261376496
+[2026-07-15 21:16:44] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/com-chay-mam-hanh-gion-rum-man-ngot-snack-ngon-mieng/1734752307261376496> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/com-chay-mam-hanh-gion-rum-man-ngot-snack-ngon-mieng/1734752307261376496 via fetcher
+completed product_detail: product_id=1734752307261376496, reviews=3
+[8/25] https://shop.tiktok.com/vn/pdp/banh-quy-bo-sua-socola-lss-mix-8-vi-snack-an-vat-doc-dao-gion-tan-nhieu-topping-huong-vi-hap-dan/1730633879529753082
+[2026-07-15 21:16:45] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/banh-quy-bo-sua-socola-lss-mix-8-vi-snack-an-vat-doc-dao-gion-tan-nhieu-topping-huong-vi-hap-dan/1730633879529753082> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/banh-quy-bo-sua-socola-lss-mix-8-vi-snack-an-vat-doc-dao-gion-tan-nhieu-topping-huong-vi-hap-dan/1730633879529753082 via fetcher
+completed product_detail: product_id=1730633879529753082, reviews=3
+[9/25] https://shop.tiktok.com/vn/pdp/banh-trang-deo-bo-chua-cay-200gr-vi-chua-cay-dam-da-mon-an-vat-thich-hop/1733974633033008158
+[2026-07-15 21:16:46] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/banh-trang-deo-bo-chua-cay-200gr-vi-chua-cay-dam-da-mon-an-vat-thich-hop/1733974633033008158> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/banh-trang-deo-bo-chua-cay-200gr-vi-chua-cay-dam-da-mon-an-vat-thich-hop/1733974633033008158 via fetcher
+completed product_detail: product_id=1733974633033008158, reviews=3
+[10/25] https://shop.tiktok.com/vn/pdp/1729740241634756896
+[2026-07-15 21:16:47] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/1729740241634756896> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/1729740241634756896 via fetcher
+completed product_detail: product_id=1729740241634756896, reviews=3
+[11/25] https://shop.tiktok.com/vn/pdp/hat-ngu-coc-ganyuan-du-dinh-duong-khong-chat-bao-quan/1731380413090071768
+[2026-07-15 21:16:48] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/hat-ngu-coc-ganyuan-du-dinh-duong-khong-chat-bao-quan/1731380413090071768> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/hat-ngu-coc-ganyuan-du-dinh-duong-khong-chat-bao-quan/1731380413090071768 via fetcher
+completed product_detail: product_id=1731380413090071768, reviews=3
+[12/25] https://shop.tiktok.com/vn/pdp/combo-12b-banh-mini-xau-vo-dau-toi-mon-an-truyen-thong/1733540954424182187
+[2026-07-15 21:16:49] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/combo-12b-banh-mini-xau-vo-dau-toi-mon-an-truyen-thong/1733540954424182187> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/combo-12b-banh-mini-xau-vo-dau-toi-mon-an-truyen-thong/1733540954424182187 via fetcher
+completed product_detail: product_id=1733540954424182187, reviews=3
+[13/25] https://shop.tiktok.com/vn/pdp/keo-deo-mix-vi-trai-cay-keo-chip-chip-phu-duong-100g-250g-500g/1734734381859833461
+[2026-07-15 21:16:50] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/keo-deo-mix-vi-trai-cay-keo-chip-chip-phu-duong-100g-250g-500g/1734734381859833461> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/keo-deo-mix-vi-trai-cay-keo-chip-chip-phu-duong-100g-250g-500g/1734734381859833461 via fetcher
+completed product_detail: product_id=1734734381859833461, reviews=3
+[14/25] https://shop.tiktok.com/vn/pdp/combo-2-hu-keo-so-co-la-nhan-dau-phong-snickers-jar-768g/1731551414971106355
+[2026-07-15 21:16:50] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/combo-2-hu-keo-so-co-la-nhan-dau-phong-snickers-jar-768g/1731551414971106355> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/combo-2-hu-keo-so-co-la-nhan-dau-phong-snickers-jar-768g/1731551414971106355 via fetcher
+completed product_detail: product_id=1731551414971106355, reviews=3
+[15/25] https://shop.tiktok.com/vn/pdp/combo-3-goi-rong-bien-su-tu-128g-de-pha-tien-loi/1731990072002120264
+[2026-07-15 21:16:52] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/combo-3-goi-rong-bien-su-tu-128g-de-pha-tien-loi/1731990072002120264> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/combo-3-goi-rong-bien-su-tu-128g-de-pha-tien-loi/1731990072002120264 via fetcher
+completed product_detail: product_id=1731990072002120264, reviews=3
+[16/25] https://shop.tiktok.com/vn/pdp/hop-23-25-goi-socola-den-it-duong-nguyen-chat-meo-ban-banh/1733244520785086119
+[2026-07-15 21:16:53] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/hop-23-25-goi-socola-den-it-duong-nguyen-chat-meo-ban-banh/1733244520785086119> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/hop-23-25-goi-socola-den-it-duong-nguyen-chat-meo-ban-banh/1733244520785086119 via fetcher
+completed product_detail: product_id=1733244520785086119, reviews=0
+[17/25] https://shop.tiktok.com/vn/pdp/kinder-joy-chocolate-surprise-egg-toy-gift-20g-ferrero/1733391371416209048
+[2026-07-15 21:16:54] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/kinder-joy-chocolate-surprise-egg-toy-gift-20g-ferrero/1733391371416209048> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/kinder-joy-chocolate-surprise-egg-toy-gift-20g-ferrero/1733391371416209048 via fetcher
+completed product_detail: product_id=1733391371416209048, reviews=0
+[18/25] https://shop.tiktok.com/vn/pdp/keo-socola-trai-tim-vang-100-vien-qua-tang-tien-loi-thom/1732751662547305871
+[2026-07-15 21:16:55] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/keo-socola-trai-tim-vang-100-vien-qua-tang-tien-loi-thom/1732751662547305871> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/keo-socola-trai-tim-vang-100-vien-qua-tang-tien-loi-thom/1732751662547305871 via fetcher
+completed product_detail: product_id=1732751662547305871, reviews=1
+[19/25] https://shop.tiktok.com/vn/pdp/1735041508491429646
+[2026-07-15 21:16:56] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/1735041508491429646> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/1735041508491429646 via fetcher
+completed product_detail: product_id=1735041508491429646, reviews=0
+[20/25] https://shop.tiktok.com/vn/pdp/banh-socola-nabati-nextar-112g-3-vi-thom-ngon-an-vat-hap-dan/1730312531164629303
+[2026-07-15 21:16:57] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/banh-socola-nabati-nextar-112g-3-vi-thom-ngon-an-vat-hap-dan/1730312531164629303> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/banh-socola-nabati-nextar-112g-3-vi-thom-ngon-an-vat-hap-dan/1730312531164629303 via fetcher
+completed product_detail: product_id=1730312531164629303, reviews=3
+[21/25] https://shop.tiktok.com/vn/pdp/1731842500424533250
+[2026-07-15 21:16:57] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/1731842500424533250> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/1731842500424533250 via fetcher
+completed product_detail: product_id=1731842500424533250, reviews=3
+[22/25] https://shop.tiktok.com/vn/pdp/socola-hersheys-miniatures-my-500g-nhieu-vi-thom-ngon/1729446699999987915
+[2026-07-15 21:16:58] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/socola-hersheys-miniatures-my-500g-nhieu-vi-thom-ngon/1729446699999987915> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/socola-hersheys-miniatures-my-500g-nhieu-vi-thom-ngon/1729446699999987915 via fetcher
+completed product_detail: product_id=1729446699999987915, reviews=3
+[23/25] https://shop.tiktok.com/vn/pdp/keo-socola-p-n-goi-30-tui-thom-ngon-han-su-dung-12-thang/1729444117478345646
+[2026-07-15 21:16:59] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/keo-socola-p-n-goi-30-tui-thom-ngon-han-su-dung-12-thang/1729444117478345646> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/keo-socola-p-n-goi-30-tui-thom-ngon-han-su-dung-12-thang/1729444117478345646 via fetcher
+completed product_detail: product_id=1729444117478345646, reviews=3
+[24/25] https://shop.tiktok.com/vn/pdp/socola-nguyen-chat-100-khong-duong-qua-tang-y-nghia-120g-hop/1733896981858846163
+[2026-07-15 21:17:02] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/socola-nguyen-chat-100-khong-duong-qua-tang-y-nghia-120g-hop/1733896981858846163> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/socola-nguyen-chat-100-khong-duong-qua-tang-y-nghia-120g-hop/1733896981858846163 via fetcher
+completed product_detail: product_id=1733896981858846163, reviews=2
+[25/25] https://shop.tiktok.com/vn/pdp/keo-nhong-socola-thom-ngon-100g-do-an-vat-ngot-ngao/1732524595857753256
+[2026-07-15 21:17:03] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/keo-nhong-socola-thom-ngon-100g-do-an-vat-ngot-ngao/1732524595857753256> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/keo-nhong-socola-thom-ngon-100g-do-an-vat-ngot-ngao/1732524595857753256 via fetcher
+completed product_detail: product_id=1732524595857753256, reviews=2
+batch crawl completed: success=25, failed=0
+[2026-07-15T14:17:03.851Z] finish crawl targets: code 0
+
+[2026-07-15T14:19:39.596Z] start crawl targets: 1 URL(s)
+[2026-07-15 21:19:52] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/c/breakfast-cereal-granola-oatmeal/918792?source=ecommerce_category&enter_method=categories&first_entrance=ecommerce_mall&first_entrance_position=region_not_match&first_entrance_tt_scene=seo&btm_pre=a2270.b8314.c37357.d69217_i2&btm_pre_show_id=8f4a290d-3b75-44a3-b1ae-0a369dcadebc&btm_transfer_id=8b5332e0-6b73-44bd-936f-510f2a2c59ce&btm_ppre=a2270.b8314.c37357.d69217_i0> (referer: https://www.google.com/)
+[2026-07-15 21:20:02] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/c/food-beverages/700437> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/c/breakfast-cereal-granola-oatmeal/918792?source=ecommerce_category&enter_method=categories&first_entrance=ecommerce_mall&first_entrance_position=region_not_match&first_entrance_tt_scene=seo&btm_pre=a2270.b8314.c37357.d69217_i2&btm_pre_show_id=8f4a290d-3b75-44a3-b1ae-0a369dcadebc&btm_transfer_id=8b5332e0-6b73-44bd-936f-510f2a2c59ce&btm_ppre=a2270.b8314.c37357.d69217_i0 via dynamic
+expanding category: https://shop.tiktok.com/vn/c/food-beverages/700437
+fetch attempt 1/3: https://shop.tiktok.com/vn/c/food-beverages/700437 via dynamic
+completed product_list: 25 links
+https://shop.tiktok.com/vn/pdp/ngu-coc-yen-mach-trai-cay-oatta-nguyen-cam-300g-bo-chat-xo-vitamin/1729575302244829479
+https://shop.tiktok.com/vn/pdp/combo-3-ngu-coc-oc-cho-me-den-gao-luc-huyet-rong-yen-mach/1729664516627794207
+https://shop.tiktok.com/vn/pdp/bot-bap-kelloggs-1-2kg-bo-dinh-duong-hang-ngay/1732023721703410099
+https://shop.tiktok.com/vn/pdp/1735423404242011945
+https://shop.tiktok.com/vn/pdp/1736473015444080325
+https://shop.tiktok.com/vn/pdp/1733682559948261359
+https://shop.tiktok.com/vn/pdp/1733316836427269762
+https://shop.tiktok.com/vn/pdp/1735602255825241466
+https://shop.tiktok.com/vn/pdp/yen-mach-nguyen-chat-can-mong-xuan-an-400g-tang-150g/1732287202445396255
+https://shop.tiktok.com/vn/pdp/ngu-coc-yen-mach-it-duong-giam-cholesterol-huyet-ap/1731499882254469335
+https://shop.tiktok.com/vn/pdp/yen-mach-uc-nguyen-chat-oatmeal-pure-500g-tui-200g/1730135946623879405
+https://shop.tiktok.com/vn/pdp/1729440043875207852
+https://shop.tiktok.com/vn/pdp/1734781535978162008
+https://shop.tiktok.com/vn/pdp/1735360244715128183
+https://shop.tiktok.com/vn/pdp/ngu-coc-dinh-duong-sing-viet-bo-canxi-danh-cho-moi-nguoi/1734584691134596386
+https://shop.tiktok.com/vn/pdp/banh-trang-tay-ninh-tien-loi-de-an-thom-ngon/1729613884382939382
+https://shop.tiktok.com/vn/pdp/combo-3-goi-tra-dai-thanh-uong-lai-chinh-hang-300g-goi/1732335726243973069
+https://shop.tiktok.com/vn/pdp/combo-banh-trang-phoi-suong-catsky-food-huong-vi-doc-dao/1729642618233522976
+https://shop.tiktok.com/vn/pdp/1735658687482005497
+https://shop.tiktok.com/vn/pdp/cha-bong-heo-c-b-thit-heo-chat-luong-tuoi-ngon-an-toan-ve-sinh/1731157133992430171
+https://shop.tiktok.com/vn/pdp/1735711804977611783
+https://shop.tiktok.com/vn/pdp/combo-2-muoi-tom-hat-thuong-hang-hai-phuoc-250g-dam-da-vi/1732492852437550109
+https://shop.tiktok.com/vn/pdp/hu-500g-dau-ha-lan-toi-ot-snack-vi-ngon-tien-loi-cho-moi-luc/1733402847190943490
+https://shop.tiktok.com/vn/pdp/kho-quet-nam-ngu-200g-toppig-tom-kho-top-mo-gion-tan/1732243352874552280
+https://shop.tiktok.com/vn/pdp/1735452412343387539
+batch crawl started: 25 URLs
+[1/25] https://shop.tiktok.com/vn/pdp/ngu-coc-yen-mach-trai-cay-oatta-nguyen-cam-300g-bo-chat-xo-vitamin/1729575302244829479
+[2026-07-15 21:20:03] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/ngu-coc-yen-mach-trai-cay-oatta-nguyen-cam-300g-bo-chat-xo-vitamin/1729575302244829479> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/ngu-coc-yen-mach-trai-cay-oatta-nguyen-cam-300g-bo-chat-xo-vitamin/1729575302244829479 via fetcher
+completed product_detail: product_id=1729575302244829479, reviews=3
+[2/25] https://shop.tiktok.com/vn/pdp/combo-3-ngu-coc-oc-cho-me-den-gao-luc-huyet-rong-yen-mach/1729664516627794207
+[2026-07-15 21:20:04] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/combo-3-ngu-coc-oc-cho-me-den-gao-luc-huyet-rong-yen-mach/1729664516627794207> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/combo-3-ngu-coc-oc-cho-me-den-gao-luc-huyet-rong-yen-mach/1729664516627794207 via fetcher
+completed product_detail: product_id=1729664516627794207, reviews=3
+[3/25] https://shop.tiktok.com/vn/pdp/bot-bap-kelloggs-1-2kg-bo-dinh-duong-hang-ngay/1732023721703410099
+[2026-07-15 21:20:05] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/bot-bap-kelloggs-1-2kg-bo-dinh-duong-hang-ngay/1732023721703410099> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/bot-bap-kelloggs-1-2kg-bo-dinh-duong-hang-ngay/1732023721703410099 via fetcher
+completed product_detail: product_id=1732023721703410099, reviews=1
+[4/25] https://shop.tiktok.com/vn/pdp/1735423404242011945
+[2026-07-15 21:20:06] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/1735423404242011945> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/1735423404242011945 via fetcher
+completed product_detail: product_id=1735423404242011945, reviews=3
+[5/25] https://shop.tiktok.com/vn/pdp/1736473015444080325
+[2026-07-15 21:20:07] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/1736473015444080325> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/1736473015444080325 via fetcher
+completed product_detail: product_id=1736473015444080325, reviews=0
+[6/25] https://shop.tiktok.com/vn/pdp/1733682559948261359
+[2026-07-15 21:20:08] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/1733682559948261359> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/1733682559948261359 via fetcher
+completed product_detail: product_id=1733682559948261359, reviews=3
+[7/25] https://shop.tiktok.com/vn/pdp/1733316836427269762
+[2026-07-15 21:20:08] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/1733316836427269762> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/1733316836427269762 via fetcher
+completed product_detail: product_id=1733316836427269762, reviews=3
+[8/25] https://shop.tiktok.com/vn/pdp/1735602255825241466
+[2026-07-15 21:20:09] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/1735602255825241466> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/1735602255825241466 via fetcher
+completed product_detail: product_id=1735602255825241466, reviews=0
+[9/25] https://shop.tiktok.com/vn/pdp/yen-mach-nguyen-chat-can-mong-xuan-an-400g-tang-150g/1732287202445396255
+[2026-07-15 21:20:10] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/yen-mach-nguyen-chat-can-mong-xuan-an-400g-tang-150g/1732287202445396255> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/yen-mach-nguyen-chat-can-mong-xuan-an-400g-tang-150g/1732287202445396255 via fetcher
+completed product_detail: product_id=1732287202445396255, reviews=3
+[10/25] https://shop.tiktok.com/vn/pdp/ngu-coc-yen-mach-it-duong-giam-cholesterol-huyet-ap/1731499882254469335
+[2026-07-15 21:20:11] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/ngu-coc-yen-mach-it-duong-giam-cholesterol-huyet-ap/1731499882254469335> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/ngu-coc-yen-mach-it-duong-giam-cholesterol-huyet-ap/1731499882254469335 via fetcher
+completed product_detail: product_id=1731499882254469335, reviews=1
+[11/25] https://shop.tiktok.com/vn/pdp/yen-mach-uc-nguyen-chat-oatmeal-pure-500g-tui-200g/1730135946623879405
+[2026-07-15 21:20:12] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/yen-mach-uc-nguyen-chat-oatmeal-pure-500g-tui-200g/1730135946623879405> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/yen-mach-uc-nguyen-chat-oatmeal-pure-500g-tui-200g/1730135946623879405 via fetcher
+completed product_detail: product_id=1730135946623879405, reviews=3
+[12/25] https://shop.tiktok.com/vn/pdp/1729440043875207852
+[2026-07-15 21:20:13] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/1729440043875207852> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/1729440043875207852 via fetcher
+completed product_detail: product_id=1729440043875207852, reviews=3
+[13/25] https://shop.tiktok.com/vn/pdp/1734781535978162008
+[2026-07-15 21:20:13] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/1734781535978162008> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/1734781535978162008 via fetcher
+completed product_detail: product_id=1734781535978162008, reviews=1
+[14/25] https://shop.tiktok.com/vn/pdp/1735360244715128183
+[2026-07-15 21:20:15] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/1735360244715128183> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/1735360244715128183 via fetcher
+completed product_detail: product_id=1735360244715128183, reviews=3
+[15/25] https://shop.tiktok.com/vn/pdp/ngu-coc-dinh-duong-sing-viet-bo-canxi-danh-cho-moi-nguoi/1734584691134596386
+[2026-07-15 21:20:16] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/ngu-coc-dinh-duong-sing-viet-bo-canxi-danh-cho-moi-nguoi/1734584691134596386> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/ngu-coc-dinh-duong-sing-viet-bo-canxi-danh-cho-moi-nguoi/1734584691134596386 via fetcher
+completed product_detail: product_id=1734584691134596386, reviews=3
+[16/25] https://shop.tiktok.com/vn/pdp/banh-trang-tay-ninh-tien-loi-de-an-thom-ngon/1729613884382939382
+[2026-07-15 21:20:17] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/banh-trang-tay-ninh-tien-loi-de-an-thom-ngon/1729613884382939382> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/banh-trang-tay-ninh-tien-loi-de-an-thom-ngon/1729613884382939382 via fetcher
+completed product_detail: product_id=1729613884382939382, reviews=3
+[17/25] https://shop.tiktok.com/vn/pdp/combo-3-goi-tra-dai-thanh-uong-lai-chinh-hang-300g-goi/1732335726243973069
+[2026-07-15 21:20:18] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/combo-3-goi-tra-dai-thanh-uong-lai-chinh-hang-300g-goi/1732335726243973069> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/combo-3-goi-tra-dai-thanh-uong-lai-chinh-hang-300g-goi/1732335726243973069 via fetcher
+completed product_detail: product_id=1732335726243973069, reviews=3
+[18/25] https://shop.tiktok.com/vn/pdp/combo-banh-trang-phoi-suong-catsky-food-huong-vi-doc-dao/1729642618233522976
+[2026-07-15 21:20:19] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/combo-banh-trang-phoi-suong-catsky-food-huong-vi-doc-dao/1729642618233522976> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/combo-banh-trang-phoi-suong-catsky-food-huong-vi-doc-dao/1729642618233522976 via fetcher
+completed product_detail: product_id=1729642618233522976, reviews=3
+[19/25] https://shop.tiktok.com/vn/pdp/1735658687482005497
+[2026-07-15 21:20:20] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/1735658687482005497> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/1735658687482005497 via fetcher
+completed product_detail: product_id=1735658687482005497, reviews=0
+[20/25] https://shop.tiktok.com/vn/pdp/cha-bong-heo-c-b-thit-heo-chat-luong-tuoi-ngon-an-toan-ve-sinh/1731157133992430171
+[2026-07-15 21:20:21] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/cha-bong-heo-c-b-thit-heo-chat-luong-tuoi-ngon-an-toan-ve-sinh/1731157133992430171> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/cha-bong-heo-c-b-thit-heo-chat-luong-tuoi-ngon-an-toan-ve-sinh/1731157133992430171 via fetcher
+completed product_detail: product_id=1731157133992430171, reviews=3
+[21/25] https://shop.tiktok.com/vn/pdp/1735711804977611783
+[2026-07-15 21:20:21] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/1735711804977611783> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/1735711804977611783 via fetcher
+completed product_detail: product_id=1735711804977611783, reviews=3
+[22/25] https://shop.tiktok.com/vn/pdp/combo-2-muoi-tom-hat-thuong-hang-hai-phuoc-250g-dam-da-vi/1732492852437550109
+[2026-07-15 21:20:22] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/combo-2-muoi-tom-hat-thuong-hang-hai-phuoc-250g-dam-da-vi/1732492852437550109> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/combo-2-muoi-tom-hat-thuong-hang-hai-phuoc-250g-dam-da-vi/1732492852437550109 via fetcher
+completed product_detail: product_id=1732492852437550109, reviews=3
+[23/25] https://shop.tiktok.com/vn/pdp/hu-500g-dau-ha-lan-toi-ot-snack-vi-ngon-tien-loi-cho-moi-luc/1733402847190943490
+[2026-07-15 21:20:23] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/hu-500g-dau-ha-lan-toi-ot-snack-vi-ngon-tien-loi-cho-moi-luc/1733402847190943490> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/hu-500g-dau-ha-lan-toi-ot-snack-vi-ngon-tien-loi-cho-moi-luc/1733402847190943490 via fetcher
+completed product_detail: product_id=1733402847190943490, reviews=3
+[24/25] https://shop.tiktok.com/vn/pdp/kho-quet-nam-ngu-200g-toppig-tom-kho-top-mo-gion-tan/1732243352874552280
+[2026-07-15 21:20:24] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/kho-quet-nam-ngu-200g-toppig-tom-kho-top-mo-gion-tan/1732243352874552280> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/kho-quet-nam-ngu-200g-toppig-tom-kho-top-mo-gion-tan/1732243352874552280 via fetcher
+completed product_detail: product_id=1732243352874552280, reviews=3
+[25/25] https://shop.tiktok.com/vn/pdp/1735452412343387539
+[2026-07-15 21:20:25] INFO: Fetched (200) <GET https://shop.tiktok.com/vn/pdp/1735452412343387539> (referer: https://www.google.com/)
+fetch attempt 1/3: https://shop.tiktok.com/vn/pdp/1735452412343387539 via fetcher
+completed product_detail: product_id=1735452412343387539, reviews=3
+batch crawl completed: success=25, failed=0
+[2026-07-15T14:20:25.662Z] finish crawl targets: code 0

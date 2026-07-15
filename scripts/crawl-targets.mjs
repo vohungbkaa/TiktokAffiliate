@@ -19,22 +19,30 @@ function run(command, args) {
   }
 }
 
-function countUrls(filePath) {
+function readUrls(filePath) {
   return readFileSync(filePath, "utf8")
     .split("\n")
-    .filter((line) => line.trim() && !line.trim().startsWith("#")).length;
+    .map((line) => line.trim())
+    .filter((line) => line && !line.startsWith("#"));
 }
 
 async function main() {
   mkdirSync("data", { recursive: true });
+  const targetIds = (process.env.CRAWL_TARGET_IDS ?? "")
+    .split(",")
+    .map((id) => id.trim())
+    .filter(Boolean);
 
   const targets = await prisma.crawlTarget.findMany({
-    where: { status: { in: ["pending", "failed"] } },
+    where:
+      targetIds.length > 0
+        ? { id: { in: targetIds } }
+        : { status: { in: ["pending", "failed"] } },
     orderBy: { createdAt: "asc" },
   });
 
   if (targets.length === 0) {
-    console.log("No pending crawl targets.");
+    console.log("No crawl targets to run.");
     return;
   }
 
@@ -98,32 +106,51 @@ async function main() {
       }
 
       run(".venv/bin/python", listArgs);
-      const discoveredCount = countUrls(outputFile);
+      const productUrls = readUrls(outputFile);
+      const discoveredCount = productUrls.length;
 
       await prisma.crawlTarget.update({
         where: { id: target.id },
         data: { discoveredCount },
       });
 
+      let detailFailures = 0;
       if (discoveredCount > 0) {
-        run(".venv/bin/python", [
-          "crawler/main.py",
-          "product-urls",
-          "--file",
-          outputFile,
-          "--limit",
-          String(discoveredCount),
-          "--batch-delay",
-          "1",
-          "--source",
-          target.source,
-          "--delay",
-          "0",
-          "--cache-ttl",
-          "43200",
-          "--max-reviews",
-          "3",
-        ]);
+        console.log(`batch crawl started: ${discoveredCount} URLs`);
+        for (const [index, productUrl] of productUrls.entries()) {
+          console.log(`[${index + 1}/${discoveredCount}] ${productUrl}`);
+          try {
+            run(".venv/bin/python", [
+              "crawler/main.py",
+              "product-detail",
+              "--url",
+              productUrl,
+              "--source",
+              target.source,
+              "--fetcher",
+              "fetcher",
+              "--delay",
+              "0",
+              "--cache-ttl",
+              "43200",
+              "--max-reviews",
+              "3",
+            ]);
+          } catch (error) {
+            detailFailures += 1;
+            console.error(`failed product detail ${productUrl}: ${error}`);
+          }
+
+          await prisma.crawlTarget.update({
+            where: { id: target.id },
+            data: { crawledCount: index + 1 },
+          });
+        }
+        console.log(`batch crawl completed: success=${discoveredCount - detailFailures}, failed=${detailFailures}`);
+      }
+
+      if (detailFailures > 0) {
+        throw new Error(`${detailFailures} product detail URL(s) failed`);
       }
 
       await prisma.crawlTarget.update({
