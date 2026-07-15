@@ -11,6 +11,131 @@ Muc tieu cua crawler:
 - Phat hien san pham co tin hieu tot nhung noi dung hien tai tren TikTok con yeu.
 - Tao danh sach san pham nen lam video truoc.
 
+## 5 Nhom Tin Hieu Can Co De Chon San Pham
+
+Bang Product List khong nen chi hien gia, hoa hong, da ban va rating. Du lieu do chi du de loc so bo. De quyet dinh san pham nao nen lam video, he thong can gom va tinh 5 nhom tin hieu sau.
+
+### 1. Tin Hieu Kiem Tien
+
+Muc tieu: biet san pham co dang tien de lam content hay khong.
+
+Nguon du lieu:
+
+- Product detail page public.
+- TikTok Shop Affiliate/Product Marketplace neu truy cap hop le.
+- Manual/CSV import khi crawler khong lay duoc hoa hong.
+
+Fields can lay/tinh:
+
+- `price`
+- `commission_rate`
+- `commission_amount`
+- `sold_count`
+- `voucher_info`
+- `shipping_note`
+- `estimated_commission_revenue = sold_count * commission_amount`
+- `price_band`
+- `profit_score`
+
+### 2. Tin Hieu Thi Truong
+
+Muc tieu: phan biet san pham dang tang voi san pham chi co tong sold cao nhung da bao hoa.
+
+Nguon du lieu:
+
+- Crawl lap lai product detail theo lich.
+- Luu metric snapshot moi lan crawl.
+- Sau nay co the thay bang API/export hop le neu co.
+
+Fields can lay/tinh:
+
+- `sold_count_delta_7d`
+- `sold_count_delta_30d`
+- `review_count_delta_7d`
+- `rating_change`
+- `sales_momentum_score`
+
+Yeu cau ky thuat:
+
+- Khong chi update `Product` hien tai.
+- Phai luu `ProductMetricSnapshot` theo `captured_at` de tinh tang truong.
+
+### 3. Tin Hieu Chat Luong
+
+Muc tieu: tranh san pham co rui ro lam mat uy tin kenh hoac kho chot don.
+
+Nguon du lieu:
+
+- Review public neu crawl duoc.
+- Product detail page.
+- Manual paste review xau.
+
+Fields can lay/tinh:
+
+- `bad_review_rate = bad_review_count / review_count`
+- `recent_bad_review_rate`
+- `complaint_summary`
+- `negative_themes`
+- `claim_warnings`
+- `quality_score`
+
+Phan tich review:
+
+- Rule-based truoc cho rating va ty le review xau.
+- AI review analyzer sau do de tach complaint: giao cham, sai mo ta, hang kem chat luong, de hong, vi te, kich ung, claim suc khoe.
+
+### 4. Tin Hieu Lam Content
+
+Muc tieu: biet san pham co de lam video 15-30 giay hay khong.
+
+Nguon du lieu:
+
+- Ten san pham.
+- Mo ta/benefit/claim tu shop.
+- Anh/video san pham neu public.
+- Review text.
+- Category.
+
+Fields can sinh:
+
+- `content_potential_score`
+- `visual_hook_score`
+- `pain_point_score`
+- `demo_score`
+- `video_angles`
+- `hook_ideas`
+- `demo_ideas`
+
+Yeu cau ky thuat:
+
+- Dung LLM sau khi da crawl/normalize data, khong goi LLM truc tiep trong luc render page.
+- Luu ket qua vao `ReviewAnalysis` va `ContentIdea` de co the xem lai, edit va do hieu qua.
+
+### 5. Tin Hieu Canh Tranh
+
+Muc tieu: biet san pham con co co hoi vao som hay da qua dong creator lam.
+
+Nguon du lieu theo thu tu uu tien:
+
+- Manual import link/video competitor.
+- CSV export tu third-party tool hop le nhu Creative Center/Kalodata/FastMoss/Shoplus neu co.
+- TikTok Search/Creative observation public neu truy cap on dinh va khong vuot captcha/login.
+
+Fields can lay/tinh:
+
+- `creator_count`
+- `video_count`
+- `top_video_views`
+- `avg_engagement_rate`
+- `posted_at`
+- `competition_score`
+
+Yeu cau ky thuat:
+
+- Tao `CompetitorVideo`.
+- MVP nen bat dau bang manual/CSV import, chua phu thuoc vao crawl TikTok Search.
+- Diem canh tranh nen la input cua scoring, khong thay the quyet dinh cuoi cung.
+
 ## Quyet Dinh Tool Crawl
 
 Primary crawler la `Scrapling`, vi he thong can structured scraping hon la chi bien page thanh Markdown.
@@ -165,58 +290,24 @@ Cham diem san pham theo cong thuc co the dieu chinh.
 
 ```text
 Product Score =
-Sales Momentum * 25%
-+ Rating Quality * 20%
-+ Commission Value * 20%
-+ Content Potential * 20%
-+ Risk Score * 15%
+Profit Score * 25%
++ Quality Score * 20%
++ Trend Score * 20%
++ Content Potential Score * 20%
++ Competition Score * 10%
++ Risk Adjustment * 5%
 ```
 
 ## Product Score
 
-### Sales Momentum
-
-Tin hieu:
-
-- So da ban.
-- Tang truong so da ban theo ngay.
-- So creator dang ban.
-- So video moi trong 7 ngay.
-
-Cham diem:
-
-```text
-0-30: it don, khong co tin hieu trend
-31-60: co don, co nguoi mua
-61-80: dang ban tot
-81-100: dang trend ro
-```
-
-### Rating Quality
-
-Tin hieu:
-
-- Rating trung binh.
-- So luong review.
-- Ty le review 1-2 sao.
-- Chat luong review co anh/video.
-
-Rule ban dau:
-
-```text
-rating >= 4.8 va review_count cao: tot
-rating 4.6-4.79: chap nhan duoc
-rating < 4.5: can can than
-review_count qua thap: khong du tin cay
-```
-
-### Commission Value
+### Profit Score
 
 Tin hieu:
 
 - Hoa hong/phan tram.
 - Hoa hong tien mat moi don.
 - Gia san pham.
+- `estimated_commission_revenue = sold_count * commission_amount`.
 
 Rule ban dau:
 
@@ -227,7 +318,44 @@ commission_amount < 5.000 VND: yeu
 > 30.000 VND: rat dang test neu conversion on
 ```
 
-### Content Potential
+### Quality Score
+
+Tin hieu:
+
+- Rating trung binh.
+- So luong review.
+- Ty le review 1-2 sao.
+- Chat luong review co anh/video.
+- Shop rating.
+
+Rule ban dau:
+
+```text
+rating >= 4.8 va review_count cao: tot
+rating 4.6-4.79: chap nhan duoc
+rating < 4.5: can can than
+review_count qua thap: khong du tin cay
+```
+
+### Trend Score
+
+Tin hieu:
+
+- So da ban.
+- Tang truong so da ban theo ngay/7 ngay/30 ngay.
+- Tang truong review theo ngay/7 ngay/30 ngay.
+- Rating co on dinh khong.
+
+Cham diem:
+
+```text
+0-30: it don, khong co tin hieu trend
+31-60: co don, co nguoi mua
+61-80: dang ban tot hoac dang tang
+81-100: dang trend ro
+```
+
+### Content Potential Score
 
 Tin hieu:
 
@@ -235,6 +363,7 @@ Tin hieu:
 - Co de tao hook khong.
 - Co phu hop voi kenh khong.
 - Co goc quay an dem/van phong/dev khong.
+- Co pain point, demo, before/after, review angle khong.
 
 Vi du san pham content potential cao:
 
@@ -245,9 +374,25 @@ Vi du san pham content potential cao:
 - Packaging bat mat.
 - San pham co review trai chieu de tao curiosity.
 
-### Risk Score
+### Competition Score
 
-Risk Score cang cao nghia la cang it rui ro.
+Tin hieu:
+
+- So creator dang ban.
+- So video moi trong 7 ngay.
+- Top video views.
+- Engagement rate.
+- Muc do bao hoa noi dung.
+
+Nguon du lieu MVP:
+
+- Manual/CSV import `CompetitorVideo`.
+- Third-party export hop le neu co.
+- TikTok Search public chi la huong sau, khong phu thuoc MVP.
+
+### Risk Adjustment
+
+Risk Adjustment tru diem khi co rui ro.
 
 Rui ro can tru diem:
 

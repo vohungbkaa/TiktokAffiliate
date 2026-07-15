@@ -51,6 +51,10 @@ Nhan ban format.
 - Tao product performance page.
 - Tao classification: weak hook, weak product, promising, winning.
 - Cap nhat lai product score bang du lieu video thuc.
+- Cap nhat lai `content_potential_score` dua tren view rate, engagement, click rate.
+- Cap nhat lai `quality/product risk` dua tren click cao nhung order thap, refund/cancel cao.
+- Luu feedback vao `AffiliateScoreSnapshot` de biet score ban dau dung hay sai.
+- So sanh performance cua minh voi `CompetitorVideo` neu co du lieu.
 
 ## Definition Of Done
 
@@ -59,3 +63,4 @@ Nhan ban format.
 - Biet video nao nen scale.
 - Biet san pham nao nen reject.
 - Co feedback loop vao product scoring.
+- Biet scoring rule nao dang du doan sai de dieu chinh trong phase 3.

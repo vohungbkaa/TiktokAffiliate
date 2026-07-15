@@ -81,7 +81,7 @@ export async function resetCrawlTarget(id: string) {
   });
 
   revalidatePath("/crawler");
-  redirect("/crawler");
+  revalidatePath(`/crawler/${id}`);
 }
 
 export async function startPendingCrawlTargets() {
@@ -94,7 +94,7 @@ export async function startPendingCrawlTargets() {
 
   if (targetIds.length === 0) {
     revalidatePath("/crawler");
-    redirect("/crawler");
+    return;
   }
 
   if (targetIds.length > 0) {
@@ -131,7 +131,6 @@ export async function startPendingCrawlTargets() {
   });
 
   revalidatePath("/crawler");
-  redirect("/crawler");
 }
 
 async function exportProductUrls(outputFile = "data/product-detail-urls.txt", source = "tiktok") {
@@ -153,7 +152,6 @@ async function exportProductUrls(outputFile = "data/product-detail-urls.txt", so
 export async function exportExistingProductUrls() {
   await exportProductUrls();
   revalidatePath("/crawler");
-  redirect("/crawler");
 }
 
 export async function refreshExistingProducts() {
@@ -203,7 +201,6 @@ export async function refreshExistingProducts() {
   });
 
   revalidatePath("/crawler");
-  redirect("/crawler");
 }
 
 export async function refreshProduct(id: string) {
@@ -279,5 +276,4 @@ export async function refreshProduct(id: string) {
 
   revalidatePath("/products");
   revalidatePath(`/products/${id}`);
-  redirect(`/products/${id}`);
 }

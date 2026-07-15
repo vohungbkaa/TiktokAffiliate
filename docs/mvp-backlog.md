@@ -58,6 +58,8 @@ Tasks:
 - Dung `DynamicFetcher` cho trang can JS.
 - Ghi ro khi nao moi dung `StealthyFetcher`.
 - Tao normalizer.
+- Tao `ProductMetricSnapshot` khi crawl/refresh detail.
+- Lay voucher, shipping note, bad review count neu co.
 - Tao error/rate-limit handling.
 - Tao crawl history trong Product Detail.
 
@@ -76,8 +78,15 @@ Tasks:
 
 - Tao model `ProductScore`.
 - Tao model `ReviewAnalysis`.
+- Tao model `ProductMetricSnapshot`.
+- Tao model `AffiliateScoreSnapshot`.
+- Tao model `CompetitorVideo`.
 - Tao scoring engine v1.
 - Tao decision engine.
+- Tinh estimated commission revenue.
+- Tinh bad review rate.
+- Tinh trend score tu sold/review delta.
+- Import competitor video bang manual/CSV truoc.
 - Tao ranking dashboard.
 - Tao prompt phan tich review.
 - Tach positive themes.
@@ -92,6 +101,7 @@ Definition of Done:
 - Co decision `test_now`, `watchlist`, `reject`.
 - Moi product co review summary.
 - Co canh bao rui ro ro rang.
+- Product List sort/filter duoc theo affiliate score va decision.
 - Co 3-5 content angles cho san pham tot.
 
 ## Milestone 4: Content Generator
@@ -106,6 +116,8 @@ Tasks:
 - Tao generator cho caption/hashtags.
 - Tao shot list.
 - Tao CTA.
+- Tao visual hook/pain point/demo idea.
+- Dua content idea vao lai affiliate score neu san pham kho lam video.
 - Tao status flow: idea -> selected -> produced -> posted.
 
 Definition of Done:

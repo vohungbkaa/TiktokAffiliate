@@ -24,7 +24,9 @@ Fallback: manual form va CSV import
 - Dung `Fetcher` truoc cho HTML public.
 - Dung `DynamicFetcher` khi can render JS/scroll.
 - Ghi ro dieu kien moi dung `StealthyFetcher`.
-- Tao normalizer cho price, commission, sold count, rating, review count.
+- Tao normalizer cho price, commission, sold count, rating, review count, voucher, shipping note.
+- Tao `ProductMetricSnapshot` moi lan crawl detail de tinh tang truong theo thoi gian.
+- Luu `bad_review_count` va review text neu nguon public cho phep.
 - Tao crawl job queue don gian.
 - Tao retry/error handling.
 - Tao raw snapshot toi thieu de debug.
@@ -34,6 +36,8 @@ Fallback: manual form va CSV import
 
 - Crawl thu duoc mot tap URL nho.
 - Normalize duoc du lieu vao `Product`.
+- Moi lan refresh product detail tao duoc metric snapshot.
+- Co du du lieu toi thieu cho scoring v1: price, commission, sold count, rating, review count, bad review count neu co.
 - Co log crawl thanh cong/that bai.
 - Co rate limit va cache.
 - Manual/CSV import van hoat dong khi crawler fail.
@@ -51,6 +55,7 @@ Fallback: manual form va CSV import
 ```text
 Product records
 ProductReview records
+ProductMetricSnapshot records
 CrawlJob logs
 RawCrawlSnapshot debug payloads neu can
 ```

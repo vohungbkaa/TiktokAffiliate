@@ -89,6 +89,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
           <Link
             className={`button secondary ${currentPage <= 1 ? "disabled-link" : ""}`}
             href={currentPage <= 1 ? buildPageHref(filters, 1) : buildPageHref(filters, currentPage - 1)}
+            scroll={false}
           >
             <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" style={{ marginRight: "4px" }}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
@@ -101,6 +102,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
           <Link
             className={`button secondary ${currentPage >= totalPages ? "disabled-link" : ""}`}
             href={currentPage >= totalPages ? buildPageHref(filters, totalPages) : buildPageHref(filters, currentPage + 1)}
+            scroll={false}
           >
             Next
             <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" style={{ marginLeft: "4px" }}>

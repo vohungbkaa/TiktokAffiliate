@@ -98,6 +98,8 @@ Tasks:
 - Dung `DynamicFetcher` khi can render JS/scroll.
 - Chi dung `StealthyFetcher` khi can va co rate limit chat.
 - Tao normalizer: price, commission, sold count, rating, review count.
+- Tao `ProductMetricSnapshot` de tinh sales/review growth 7d/30d.
+- Lay them voucher, shipping note, bad review count neu public page co.
 - Tao crawl job queue don gian.
 - Tao retry/error handling.
 - Tao raw snapshot toi thieu de debug.
@@ -127,6 +129,9 @@ Tasks:
 
 - Tao `ProductScore`.
 - Implement scoring v1.
+- Tinh `estimated_commission_revenue`, `bad_review_rate`, trend delta tu metric snapshot.
+- Them score thanh phan: profit, quality, trend, content potential, competition, risk.
+- Tao `CompetitorVideo` voi manual/CSV import truoc khi tinh crawl/search TikTok.
 - Tao decision engine: `test_now`, `watchlist`, `only_if_good_angle`, `reject`.
 - Tao AI review analyzer.
 - Tom tat review tot/xau.
@@ -138,6 +143,7 @@ Definition of Done:
 - Moi product co score va decision.
 - Co ly do cham diem.
 - Co review summary.
+- Product List co the sort theo affiliate score va hien badge rui ro/co hoi.
 - Co top san pham nen test moi ngay.
 
 ## Phase 4: AI Content Generator
@@ -148,6 +154,7 @@ Muc tieu:
 
 - Bien san pham da duoc chon thanh y tuong video.
 - Sinh hook, script, caption, hashtag, CTA, text overlay.
+- Sinh visual hook, pain point, demo idea, before/after angle dua tren du lieu product/review.
 - Canh bao cac claim khong nen noi qua, dac biet voi do an, suc khoe, giam can, hang gia, hang chinh hang.
 
 Ket qua can co:

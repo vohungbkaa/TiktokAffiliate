@@ -25,6 +25,10 @@ shipping_note
 raw_source
 last_crawled_at
 status
+estimated_commission_revenue
+bad_review_rate
+affiliate_score
+affiliate_decision
 created_at
 updated_at
 ```
@@ -45,14 +49,16 @@ rejected
 ```text
 id
 product_id
-sales_momentum_score
-rating_quality_score
-commission_value_score
+profit_score
+quality_score
+trend_score
 content_potential_score
-risk_score
+competition_score
+risk_adjustment_score
 total_score
 decision
 reason_summary
+badges
 created_at
 ```
 
@@ -63,6 +69,54 @@ test_now
 watchlist
 only_if_good_angle
 reject
+```
+
+## ProductMetricSnapshot
+
+```text
+id
+product_id
+price
+commission_rate
+commission_amount
+sold_count
+rating
+review_count
+bad_review_count
+voucher_info
+shipping_note
+source
+captured_at
+created_at
+```
+
+Derived metrics:
+
+```text
+sold_count_delta_7d
+sold_count_delta_30d
+review_count_delta_7d
+rating_change
+commission_change
+```
+
+## AffiliateScoreSnapshot
+
+```text
+id
+product_id
+product_score_id
+profit_score
+quality_score
+trend_score
+content_potential_score
+competition_score
+risk_adjustment_score
+total_score
+decision
+reason_summary
+captured_at
+created_at
 ```
 
 ## ProductReview
@@ -89,7 +143,40 @@ negative_themes
 risk_summary
 content_angles
 claim_warnings
+complaint_summary
+visual_hook_score
+pain_point_score
+demo_score
 created_at
+```
+
+## CompetitorVideo
+
+```text
+id
+product_id
+video_url
+creator_name
+caption
+views
+likes
+comments
+shares
+posted_at
+captured_at
+source
+created_at
+updated_at
+```
+
+Derived metrics:
+
+```text
+engagement_rate = (likes + comments + shares) / views
+creator_count per product
+video_count per product
+top_video_views per product
+competition_score
 ```
 
 ## CrawlJob
