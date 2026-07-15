@@ -77,38 +77,37 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
 
       <ProductFilters categories={categories} filters={{ ...filters, pageSize: String(pageSize) }} />
 
-      <section className="panel">
-        <div className="panel-header">
-          <h2>Product List</h2>
-          <span className="muted">
-            Showing {products.length.toLocaleString()} of {totalProducts.toLocaleString()} products
-          </span>
-        </div>
+      <section className="panel flex-panel">
         <ProductTable products={products} />
         <div className="pagination">
-          <Link
-            className={`button secondary ${currentPage <= 1 ? "disabled-link" : ""}`}
-            href={currentPage <= 1 ? buildPageHref(filters, 1) : buildPageHref(filters, currentPage - 1)}
-            scroll={false}
-          >
-            <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" style={{ marginRight: "4px" }}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-            </svg>
-            Previous
-          </Link>
-          <span className="pagination-info">
-            Page <strong className="current">{currentPage.toLocaleString()}</strong> of <strong>{totalPages.toLocaleString()}</strong>
-          </span>
-          <Link
-            className={`button secondary ${currentPage >= totalPages ? "disabled-link" : ""}`}
-            href={currentPage >= totalPages ? buildPageHref(filters, totalPages) : buildPageHref(filters, currentPage + 1)}
-            scroll={false}
-          >
-            Next
-            <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" style={{ marginLeft: "4px" }}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-            </svg>
-          </Link>
+          <div className="pagination-count">
+            Showing <strong>{(((currentPage - 1) * pageSize) + 1).toLocaleString()}</strong> – <strong>{Math.min(currentPage * pageSize, totalProducts).toLocaleString()}</strong> of <strong>{totalProducts.toLocaleString()}</strong> products
+          </div>
+          <div className="pagination-controls">
+            <Link
+              className={`button secondary ${currentPage <= 1 ? "disabled-link" : ""}`}
+              href={currentPage <= 1 ? buildPageHref(filters, 1) : buildPageHref(filters, currentPage - 1)}
+              scroll={false}
+            >
+              <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" style={{ marginRight: "4px" }}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+              </svg>
+              Previous
+            </Link>
+            <span className="pagination-info">
+              Page <strong className="current">{currentPage.toLocaleString()}</strong> of <strong>{totalPages.toLocaleString()}</strong>
+            </span>
+            <Link
+              className={`button secondary ${currentPage >= totalPages ? "disabled-link" : ""}`}
+              href={currentPage >= totalPages ? buildPageHref(filters, totalPages) : buildPageHref(filters, currentPage + 1)}
+              scroll={false}
+            >
+              Next
+              <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" style={{ marginLeft: "4px" }}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </Link>
+          </div>
         </div>
       </section>
     </>
