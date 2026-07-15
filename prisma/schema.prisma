@@ -8,10 +8,10 @@ datasource db {
 }
 
 model Product {
-  id               String   @id @default(cuid())
+  id               String   @id
   name             String
   productUrl       String   @unique
-  externalId       String?
+  externalId       String?  @unique
   imageUrl         String?
   category         String?
   shopName         String?
@@ -83,6 +83,31 @@ model CrawlJob {
   @@index([source])
   @@index([jobType])
   @@index([targetUrl])
+}
+
+model CrawlTarget {
+  id                  String    @id @default(cuid())
+  url                 String    @unique
+  label               String?
+  source              String    @default("tiktok")
+  maxItems            Int       @default(25)
+  fetcher             String    @default("dynamic")
+  expandCategoryPages Boolean   @default(true)
+  maxCategoryPages    Int       @default(8)
+  scrollRounds        Int       @default(2)
+  readMoreClicks      Int       @default(1)
+  scrollWaitMs        Int       @default(800)
+  status              String    @default("pending")
+  discoveredCount     Int       @default(0)
+  crawledCount        Int       @default(0)
+  lastError           String?
+  lastStartedAt       DateTime?
+  lastFinishedAt      DateTime?
+  createdAt           DateTime  @default(now())
+  updatedAt           DateTime  @updatedAt
+
+  @@index([status])
+  @@index([source])
 }
 
 model RawCrawlSnapshot {

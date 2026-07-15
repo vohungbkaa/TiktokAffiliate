@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { refreshProduct } from "@/app/actions";
 import { prisma } from "@/lib/prisma";
 
 type ProductDetailPageProps = {
@@ -26,6 +27,16 @@ function formatCurrency(value: unknown, currency = "VND") {
   }).format(Number(value));
 }
 
+function renderStars(rating: number | null) {
+  if (rating === null) return null;
+  const rounded = Math.round(rating);
+  return (
+    <span className="review-stars" style={{ color: "var(--accent-gold)", letterSpacing: "2px" }}>
+      {"★".repeat(rounded) + "☆".repeat(5 - rounded)}
+    </span>
+  );
+}
+
 export default async function ProductDetailPage({ params }: ProductDetailPageProps) {
   const { id } = await params;
   const product = await prisma.product.findUnique({
@@ -48,12 +59,22 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
     <>
       <div className="page-header">
         <div>
-          <h1>{product.name}</h1>
-          <p>{product.productUrl}</p>
+          <h1 style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
+            {product.name}
+            {product.category && <span className="badge" style={{ fontSize: "12px" }}>{product.category}</span>}
+          </h1>
+          <p className="url-text">{product.productUrl}</p>
         </div>
-        <Link className="button" href={`/products/${product.id}/edit`}>
-          Edit Product
-        </Link>
+        <div className="button-group">
+          <form action={refreshProduct.bind(null, product.id)}>
+            <button type="submit" className="secondary">
+              Refresh Product
+            </button>
+          </form>
+          <Link className="button" href={`/products/${product.id}/edit`}>
+            Edit Product
+          </Link>
+        </div>
       </div>
 
       <div className="detail-grid">
@@ -62,51 +83,57 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
           <div className="kv">
             <div>
               <span>Category</span>
-              {formatValue(product.category)}
+              <strong className="value">{formatValue(product.category)}</strong>
             </div>
             <div>
               <span>Shop</span>
-              {formatValue(product.shopName)}
+              <strong className="value">{formatValue(product.shopName)}</strong>
             </div>
             <div>
               <span>Price</span>
-              {formatCurrency(product.price, product.currency)}
+              <strong className="value">{formatCurrency(product.price, product.currency)}</strong>
             </div>
             <div>
               <span>Commission Rate</span>
-              {formatValue(product.commissionRate)}%
+              <strong className="value" style={{ color: "var(--accent-cyan)" }}>
+                {formatValue(product.commissionRate)}%
+              </strong>
             </div>
             <div>
               <span>Commission Amount</span>
-              {formatCurrency(product.commissionAmount, product.currency)}
+              <strong className="value" style={{ color: "var(--accent-cyan)" }}>
+                {formatCurrency(product.commissionAmount, product.currency)}
+              </strong>
             </div>
             <div>
               <span>Sold Count</span>
-              {product.soldCount.toLocaleString()}
+              <strong className="value">{product.soldCount.toLocaleString()}</strong>
             </div>
             <div>
               <span>Rating</span>
-              {formatValue(product.rating)}
+              <strong className="value" style={{ color: "var(--accent-gold)" }}>
+                {product.rating ? `★ ${product.rating.toFixed(1)}` : "-"}
+              </strong>
             </div>
             <div>
               <span>Reviews</span>
-              {product.reviewCount.toLocaleString()}
+              <strong className="value">{product.reviewCount.toLocaleString()}</strong>
             </div>
             <div>
               <span>Bad Reviews</span>
-              {product.badReviewCount.toLocaleString()}
+              <strong className="value" style={{ color: product.badReviewCount > 0 ? "var(--danger)" : "var(--success)" }}>
+                {product.badReviewCount.toLocaleString()}
+              </strong>
             </div>
             <div>
               <span>Voucher</span>
-              {formatValue(product.voucherInfo)}
+              <strong className="value">{formatValue(product.voucherInfo)}</strong>
             </div>
-            <div>
-              <span>Shipping</span>
-              {formatValue(product.shippingNote)}
-            </div>
-            <div>
-              <span>Updated</span>
-              {product.updatedAt.toLocaleString()}
+            <div className="field full" style={{ borderBottom: 0, paddingBottom: 0 }}>
+              <span>Shipping Note</span>
+              <p style={{ margin: "4px 0 0", color: "var(--text-secondary)", fontSize: "14px" }}>
+                {formatValue(product.shippingNote)}
+              </p>
             </div>
           </div>
         </section>
@@ -119,14 +146,45 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
             {product.snapshots.map((snapshot) => (
               <div key={snapshot.id} className="crawl-history-item">
                 <strong>{snapshot.crawlJob?.jobType ?? "snapshot"}</strong>
-                <span>{snapshot.crawlJob?.status ?? "captured"}</span>
+                <span className={`badge ${snapshot.crawlJob?.status === "completed" ? "success" : "warning"}`} style={{ fontSize: "10px", width: "fit-content" }}>
+                  {snapshot.crawlJob?.status ?? "captured"}
+                </span>
                 <span>{snapshot.capturedAt.toLocaleString()}</span>
-                <span>{snapshot.contentHash?.slice(0, 12) ?? "-"}</span>
+                <span className="muted" style={{ fontFamily: "monospace" }}>{snapshot.contentHash?.slice(0, 12) ?? "-"}</span>
               </div>
             ))}
           </div>
         </aside>
       </div>
+
+      <section className="panel reviews-section">
+        <div className="panel-header">
+          <h2>Recent Customer Reviews</h2>
+          <span className="muted">{product.reviews.length} reviews loaded</span>
+        </div>
+        <div style={{ padding: "24px" }}>
+          {product.reviews.length === 0 ? (
+            <p className="muted" style={{ margin: 0, textAlign: "center", padding: "20px" }}>No reviews captured yet.</p>
+          ) : (
+            <div className="reviews-grid">
+              {product.reviews.map((review) => (
+                <div key={review.id} className={`review-card ${review.isBad ? "bad-review" : ""}`}>
+                  <div className="review-header">
+                    <span className="review-author">{review.author || "TikTok Customer"}</span>
+                    <div className="review-meta">
+                      {renderStars(review.rating)}
+                      <span className="review-date">
+                        {review.reviewedAt ? new Date(review.reviewedAt).toLocaleDateString() : new Date(review.capturedAt).toLocaleDateString()}
+                      </span>
+                    </div>
+                  </div>
+                  <p className="review-content">{review.content}</p>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
     </>
   );
 }

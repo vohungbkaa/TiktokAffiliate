@@ -34,18 +34,22 @@ export default async function DashboardPage() {
         <div className="stat">
           <span>Products</span>
           <strong>{productCount.toLocaleString()}</strong>
+          <span className="stat-small">Total unique tracked items</span>
         </div>
         <div className="stat">
           <span>Total Sold</span>
           <strong>{(aggregate._sum.soldCount ?? 0).toLocaleString()}</strong>
+          <span className="stat-small">Across all active listings</span>
         </div>
         <div className="stat">
           <span>Avg Rating</span>
-          <strong>{aggregate._avg.rating?.toFixed(2) ?? "-"}</strong>
+          <strong>{aggregate._avg.rating ? `★ ${aggregate._avg.rating.toFixed(2)}` : "-"}</strong>
+          <span className="stat-small">Average consumer rating</span>
         </div>
         <div className="stat">
           <span>Crawl Jobs</span>
           <strong>{crawlJobCount.toLocaleString()}</strong>
+          <span className="stat-small">Completed and pending crawl tasks</span>
         </div>
       </section>
 

@@ -20,6 +20,7 @@ URLS_FILE="${URLS_FILE:-data/category-urls.txt}"
 PRODUCT_LIMIT_PER_URL="${PRODUCT_LIMIT_PER_URL:-${PRODUCT_LIMIT:-25}}"
 RESET_DB="${RESET_DB:-true}"
 OUTPUT_FILE="${OUTPUT_FILE:-data/discovered-product-urls.txt}"
+PRODUCT_URLS_FILE="${PRODUCT_URLS_FILE:-data/product-detail-urls.txt}"
 SOURCE="${SOURCE:-tiktok}"
 FETCHER="${FETCHER:-dynamic}"
 EXPAND_CATEGORY_PAGES="${EXPAND_CATEGORY_PAGES:-true}"
@@ -105,5 +106,8 @@ npm run crawl:product-urls -- \
   --delay "$DETAIL_DELAY" \
   --cache-ttl "$DETAIL_CACHE_TTL" \
   --max-reviews "$MAX_REVIEWS"
+
+echo "Exporting crawled product detail URLs from DB..."
+node scripts/export-product-urls.mjs --output "$PRODUCT_URLS_FILE" --source "$SOURCE"
 
 echo "Done. Open /products in the web app to review crawled data."

@@ -56,6 +56,16 @@ export function toStringOrNull(value: FormDataEntryValue | null) {
   return trimmed.length > 0 ? trimmed : null;
 }
 
+export function productIdFromUrl(productUrl: string) {
+  try {
+    const url = new URL(productUrl);
+    const lastPart = url.pathname.split("/").filter(Boolean).at(-1);
+    return lastPart && /^\d+$/.test(lastPart) ? lastPart : productUrl;
+  } catch {
+    return productUrl;
+  }
+}
+
 export function productDataFromForm(formData: FormData) {
   const name = toStringOrNull(formData.get("name"));
   const productUrl = toStringOrNull(formData.get("productUrl"));

@@ -2,7 +2,41 @@
 
 Tai lieu nay dung khi muon xoa sach database local va crawl lai du lieu that tu mot hoac nhieu TikTok Shop category URL.
 
-## Quick Run
+## Recommended App Flow
+
+Chay web app:
+
+```bash
+./scripts/run.sh
+```
+
+Mo:
+
+```text
+http://localhost:3000/crawler
+```
+
+Trong tab `Crawl URLs`:
+
+1. Paste TikTok Shop category URL vao form `Add Category URL`.
+2. Nhap `Items`, vi du `25`.
+3. Bam `Add URL`.
+4. Bam `Start Crawl`.
+
+URL duoc luu trong database bang `CrawlTarget`. Moi URL co trang thai rieng:
+
+```text
+pending   -> chua crawl
+running   -> dang crawl
+completed -> da crawl xong
+failed    -> loi, co the bam Start Crawl de retry
+```
+
+Khi bam `Start Crawl`, he thong chi crawl cac URL co status `pending` hoac `failed`. URL nao da `completed` se duoc bo qua de tranh crawl lai khong can thiet.
+
+Neu muon crawl lai mot URL da xong, bam `Reset` tren URL do de dua status ve `pending`, roi bam `Start Crawl`.
+
+## Legacy Script Flow
 
 Sua file danh sach URL:
 
@@ -37,8 +71,9 @@ Script se tu dong:
 1. Xoa sach DB neu `RESET_DB=true`.
 2. Lay danh sach product URL tu tat ca category trong `data/category-urls.txt`.
 3. Crawl detail tung product vao DB.
+4. Export URL detail da co trong DB ra `data/product-detail-urls.txt`.
 
-Mac dinh config hien tai crawl toi da `25` san pham moi category.
+So san pham moi category duoc quyet dinh boi `PRODUCT_LIMIT_PER_URL` trong `config/tiktok-crawl.env`.
 
 ## 1. Xoa Sach Database
 
@@ -142,8 +177,46 @@ Neu Next.js bao port `3000` dang ban va tu chuyen sang port khac, mo dung port t
 http://localhost:3001/products
 ```
 
+## 6. Luu Product Detail URL De Refresh Sau Nay
+
+Sau khi crawl detail thanh cong, script se tu dong export toan bo `Product.productUrl` trong DB ra:
+
+```text
+data/product-detail-urls.txt
+```
+
+File nay la danh sach URL detail on dinh de refresh lai cac san pham da co. Khac voi `data/discovered-product-urls.txt`, file nay duoc tao tu DB sau khi crawl thanh cong.
+
+Neu muon export thu cong:
+
+```bash
+npm run products:export-urls -- --output data/product-detail-urls.txt --source tiktok
+```
+
+## 7. Refresh Lai San Pham Da Co
+
+Khi muon cap nhat lai thong ke sau mot thoi gian, khong can crawl category nua. Chay:
+
+```bash
+./scripts/refresh-existing-products.sh
+```
+
+Hoac:
+
+```bash
+npm run crawl:refresh-products
+```
+
+Script refresh se:
+
+1. Export lai URL detail hien co tu DB ra `data/product-detail-urls.txt`.
+2. Crawl lai tung URL detail trong file do.
+3. Update record cu trong `Product` theo `productUrl`, khong tao trung product.
+4. Tao them `CrawlJob` va `RawCrawlSnapshot` moi de co lich su crawl.
+
 ## Luu Y
 
 - Crawler khong bypass captcha/security check. Neu TikTok tra ve captcha, hay dung category/product URL khac hoac quay lai manual/CSV import.
 - Nen giu `PRODUCT_LIMIT_PER_URL`, `--max-items`, va `--limit` nho khi test, vi TikTok co the thay doi cach render page hoac rate-limit.
-- `data/discovered-product-urls.txt` chi la file trung gian. Muon crawl category moi thi chay lai buoc lay product URL voi URL moi.
+- `data/discovered-product-urls.txt` chi la file trung gian cua lan crawl category gan nhat.
+- `data/product-detail-urls.txt` la file URL detail export tu DB, dung de refresh san pham da co.

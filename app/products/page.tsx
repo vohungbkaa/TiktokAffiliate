@@ -33,7 +33,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
         </Link>
       </div>
 
-      <form className="filters">
+      <form className="filters" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", alignItems: "end" }}>
         <div className="field">
           <label htmlFor="category">Category</label>
           <select id="category" name="category" defaultValue={filters.category ?? ""}>
@@ -47,7 +47,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
         </div>
         <div className="field">
           <label htmlFor="minRating">Min Rating</label>
-          <input id="minRating" name="minRating" type="number" step="0.1" defaultValue={filters.minRating ?? ""} />
+          <input id="minRating" name="minRating" type="number" step="0.1" defaultValue={filters.minRating ?? ""} placeholder="e.g. 4.0" />
         </div>
         <div className="field">
           <label htmlFor="minCommission">Min Commission %</label>
@@ -57,14 +57,15 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
             type="number"
             step="0.1"
             defaultValue={filters.minCommission ?? ""}
+            placeholder="e.g. 10"
           />
         </div>
         <div className="field">
           <label htmlFor="minSold">Min Sold</label>
-          <input id="minSold" name="minSold" type="number" defaultValue={filters.minSold ?? ""} />
+          <input id="minSold" name="minSold" type="number" defaultValue={filters.minSold ?? ""} placeholder="e.g. 1000" />
         </div>
         <div className="field">
-          <label htmlFor="sort">Sort</label>
+          <label htmlFor="sort">Sort By</label>
           <select id="sort" name="sort" defaultValue={filters.sort ?? "updated"}>
             <option value="updated">Recently updated</option>
             <option value="rating">Rating high to low</option>
@@ -73,13 +74,9 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
             <option value="price">Price low to high</option>
           </select>
         </div>
-        <div className="field">
-          <label>&nbsp;</label>
-          <button type="submit">Apply Filters</button>
-        </div>
-        <div className="field">
-          <label>&nbsp;</label>
-          <Link className="button secondary" href="/products">
+        <div className="field" style={{ display: "flex", gap: "10px", minWidth: "220px" }}>
+          <button type="submit" style={{ flex: 1 }}>Filter</button>
+          <Link className="button secondary" href="/products" style={{ flex: 1 }}>
             Reset
           </Link>
         </div>

@@ -21,7 +21,7 @@ export function ProductForm({ action, product, submitLabel }: ProductFormProps) 
       <div className="panel-header">
         <h2>Product Data</h2>
       </div>
-      <div className="card" style={{ border: 0 }}>
+      <div style={{ padding: "24px" }}>
         <div className="form-grid">
           <div className="field">
             <label htmlFor="name">Name</label>

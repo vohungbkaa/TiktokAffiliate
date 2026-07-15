@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { parse } from "papaparse";
 import { prisma } from "@/lib/prisma";
+import { productIdFromUrl } from "@/lib/products";
 
 type CsvRow = Record<string, string | undefined>;
 
@@ -75,6 +76,7 @@ export async function POST(request: Request) {
         shippingNote: text(row, "shipping_note"),
       },
       create: {
+        id: productIdFromUrl(productUrl),
         name,
         productUrl,
         category: text(row, "category"),

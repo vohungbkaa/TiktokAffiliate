@@ -17,7 +17,7 @@ export default function ImportPage() {
         <div className="panel-header">
           <h2>Upload CSV</h2>
         </div>
-        <div className="card" style={{ border: 0 }}>
+        <div style={{ padding: "24px" }}>
           <form action="/api/products/import" method="post" encType="multipart/form-data">
             <div className="field">
               <label htmlFor="file">CSV File</label>

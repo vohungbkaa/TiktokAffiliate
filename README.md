@@ -37,7 +37,8 @@ Open `http://localhost:3000`.
 - `npm run build`: generate Prisma client and build the web app.
 - `npm run db:migrate -- --name init`: create/update the local SQLite database.
 - `npm run db:seed`: seed sample product data for local UI testing only.
-- `npm run db:clear-sample`: remove seeded/fixture sample data from the local database.
+- `npm run db:clear-sample`: remove seeded/fixture sample data from the local database (keeps crawled data).
+- `npx prisma migrate reset`: wipe and recreate the entire database completely (deletes all tables, crawled products, targets, and history).
 - `npm run crawler:check`: verify Python can import Scrapling.
 - `npm run crawler:dev`: run the crawler service placeholder.
 - `npm run crawl:product-list -- --url <public-list-url>`: crawl a small product list.
@@ -77,7 +78,7 @@ cp data/product-urls.example.txt data/product-urls.txt
 npm run crawl:product-urls -- --file data/product-urls.txt --limit 100 --batch-delay 3
 ```
 
-To reset the local DB and test crawling real TikTok Shop products from scratch, add category URLs to `data/category-urls.txt`, edit `config/tiktok-crawl.env`, and run `./scripts/crawl-real-tiktok.sh`. Full guide: `docs/test-real-tiktok-crawl.md`.
+To reset the local DB and test crawling real TikTok Shop products from scratch, add category URLs to `data/category-urls.txt`, edit `config/tiktok-crawl.env`, and run `./scripts/crawl-real-tiktok.sh`. To refresh existing products later, run `./scripts/refresh-existing-products.sh`. Full guide: `docs/test-real-tiktok-crawl.md`.
 
 The crawler uses `Fetcher` first. Use `--fetcher dynamic` only when a page needs JavaScript rendering. Use `--fetcher stealthy` only for legitimate public pages that lightly block normal fetching, and always pass `--stealth-reason`.
 

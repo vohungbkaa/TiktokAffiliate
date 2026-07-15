@@ -1,18 +1,24 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
+import { Sidebar } from "@/components/Sidebar";
 import "./globals.css";
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+  display: "swap",
+});
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "TikTok Affiliate Ops",
   description: "Product data and crawler operations dashboard",
 };
-
-const navItems = [
-  { href: "/", label: "Dashboard" },
-  { href: "/products", label: "Products" },
-  { href: "/products/new", label: "Add Product" },
-  { href: "/import", label: "CSV Import" },
-];
 
 export default function RootLayout({
   children,
@@ -20,25 +26,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${outfit.variable} ${plusJakarta.variable}`}>
       <body>
         <div className="shell">
-          <aside className="sidebar">
-            <Link className="brand" href="/">
-              <span className="brand-mark">TA</span>
-              <span>TikTok Affiliate Ops</span>
-            </Link>
-            <nav className="nav">
-              {navItems.map((item) => (
-                <Link key={item.href} href={item.href}>
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
-          </aside>
+          <Sidebar />
           <main className="main">{children}</main>
         </div>
       </body>
     </html>
   );
 }
+

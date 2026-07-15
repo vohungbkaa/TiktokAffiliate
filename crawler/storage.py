@@ -5,6 +5,7 @@ import sqlite3
 from datetime import datetime, timezone
 from pathlib import Path
 from uuid import uuid4
+from urllib.parse import urlparse
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -16,6 +17,21 @@ def now_iso() -> str:
 
 def cuid() -> str:
     return f"py_{uuid4().hex}"
+
+
+def product_id_from_data(data: dict[str, object]) -> str:
+    external_id = data.get("externalId")
+    if isinstance(external_id, str) and external_id.strip():
+        return external_id.strip()
+
+    product_url = str(data.get("productUrl") or "")
+    path_parts = [part for part in urlparse(product_url).path.split("/") if part]
+    if path_parts:
+        last_part = path_parts[-1]
+        if last_part.isdigit():
+            return last_part
+
+    return product_url or cuid()
 
 
 def database_path() -> Path:
@@ -131,7 +147,7 @@ class CrawlStore:
             self.conn.commit()
             return str(existing["id"])
 
-        product_id = cuid()
+        product_id = product_id_from_data(data)
         values = [data.get(field) for field in fields]
         self.conn.execute(
             f"""
